@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Publishing.Api.IntegrationTest</name>
+    </assembly>
+    <members>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest">
+            <summary>
+            Test /api/builds and related endpoint
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.CheckMethodsTest">
+            <summary>
+            1. Check if the methods of this api have been changed.
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.GetAccessAPITest">
+            <summary>
+            1. use GET method to access the API 
+            2. check the data model in response content is correct.
+            <list type="bullet">
+            <item>
+            <description>/api/builds</description>
+            </item>
+            <item>
+            <description>/api/builds/ci</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.GetAccessAPIWithIdTest">
+            <summary>
+            Check the available method of endpoint with ID , 
+            <list type="bullet">
+            <item>
+            <description>/api/builds</description>
+            </item>
+            <item>
+            <description>/api/builds/{id}</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.BuildsWithKatanaTest">
+            <summary>
+            All kanata build in the give branch should be fetched without missing. Only compare the number of builds.
+            <list type="bullet">
+            <item>                    
+            <description>/api/builds</description>                
+            </item>
+            </list>
+            </summary>
+            <remarks> 
+            The testcase compares where we read from /api/builds against the Katana JSON api
+            There is a risk if the Katana JSON API is wrong, so the error is overlooked. 
+            </remarks>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.PromoteBuildTest">
+            <summary>
+            promote a build.
+            <list type="Bullet">
+            <item>
+            <description>/api/builds/{id}/promote</description>
+            </item>        
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.GetBuildsIdFromReleaseTrack(System.String)">
+            <summary>
+            return the builds Id of a branch
+            </summary>
+            <param name="content">Should be the response from /api/builds?trackid={id}</param>
+            <returns>the builds id under that branch</returns>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase">
+            <summary>
+            Base class of ApiIntegrationTest
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase.CompareTwoList(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Compare two list, find out the difference between two list.
+            </summary>
+            <param name="refList"></param>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase.ParseResponseContent(System.String)">
+            <summary>
+            Parse a json in string format to JObject
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase.CompareResponseToDataModel(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Compare the response data to the defined data model in Api Docs
+            </summary>
+            <param name="content"></param>
+            <param name="dm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase.IsApiUpRunning">
+            <summary>
+            By call /api/versions to determine if the api is runnning 
+            Used to check if api is available to save execution time.
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiIntegrationTestBase.AssertTestcase(System.Collections.Generic.List{System.String})">
+            <summary>
+            Assert the testcase by check the the number of element in errmsgs list 
+            </summary>
+            <param name="errmsgs"></param>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest">
+            <summary>
+            Test suite of /api/jobs endpoinds.
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest.CheckMethodsTest">
+            <summary>
+            1. Check if the methods of this api have been changed.
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest.TriggerJobTest">
+            <summary>
+            This testcase trigger a job, and check the Job ID is availabed to query.
+            The details of the job is not checked in this testcase.
+            <list type="bullet">
+            <item>
+            <description>/api/Trigger</description>
+            </item>
+            <item>
+            <description>/api/jobs/{correlationId}</description>
+            </item>                
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest.JobDataModelTest">
+            <summary>
+            This testcase checks
+            /api/jobs, /api/jobs/{correlationId} return data using correct datamodel
+            <list type="bullet">
+            <item>
+            <description>/api/Trigger</description>
+            </item>        
+            <item>
+            <description>/api/jobs</description>
+            </item>
+            <item>
+            <description>/api/jobs/{correlationId}</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest.JobsContentsTest">
+            <summary>
+            The content of the job should be correct, such as
+            spec id, name, description, stauts, activities.. 
+            <list type="bullet">
+            <item>
+            <description>/api/Trigger</description>
+            </item>        
+            <item>
+            <description>/api/jobs</description>
+            </item>
+            <item>
+            <description>/api/jobs/{correlationId}</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiJobsIntegrationTest.ReadJobIds(System.String)">
+            <summary>
+            used to parse the response body from /api/Trigger
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest">
+            <summary>
+            Test suite of Release Track endpoints
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.CheckMethodsTest">
+            <summary>
+            Check if the methods of this api have been changed.                
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.GetAccessAPITest">
+            <summary>
+            use GET method to access the API, also check the data model in response content is correct.
+            <list type="bullet">
+            <item>
+            <description>/api/releasetracks</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.PostDataModelTest">
+            <summary>
+            Check the Data model for Post method. If this testcase failed,
+            the other testcase related POST will be invalid.
+            <list type="bullet">
+            <description>/api/releasetracks</description>    
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.CreateNewReleaseTrackTest">
+            <summary>
+            Create New Release Track test.
+            Two new release track with same input will be created, but the id should not be same. 
+            <list type="bullet">
+            <item>
+            <description>/api/releasetracks</description>        
+            </item>
+            </list>
+            </summary>                
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.AccessReleaseTrackIDTest">
+            <summary>
+            Access the api/releasetrack/{id} endpoint. Need create a release track first.
+            <list type="bullet">
+            <item>
+            <description>/api/releasetracks</description>
+            <description>/api/releasetracks/{id}</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.UpdateReleaseTrackTest">
+            <summary>
+            use Branch Update and branch check API to Get and update the existing Release track information
+            <list type="bullet">
+            <item>
+            <description>/api/releasetracks</description>
+            <description>/api/releasetracks/{id}</description>
+            <description>/api/releasetracks/branchupdate</description>
+            <description>/api/releasetracks/branchcheck</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.PostToReleaseTrackIDTest">
+            <summary>
+            POST message to /api/releasetracks/{id}
+            It is not possible to post a brand new track there. 
+            <list type="bullet">
+            <item>
+            <description>/api/releasetracks</description>
+            <description>/api/releasetracks/{id}</description>        
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.CreatePayload">
+            <summary>
+            Only used in this class create random Release track name and branch name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.ApiVersionsIntegrationTest">
+            <summary>
+            Test suite for /api/versions
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiVersionsIntegrationTest.CheckMethodsTest">
+            <summary>
+            Check if the methods of this api have been changed.
+            </summary>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiVersionsIntegrationTest.GetAccessAPITest">
+            <summary>
+            use GET method to access the API, also check the data model in response content is correct. 
+            <list type="bullet">
+            <item>
+            <description>/api/versions</description>
+            </item>
+            </list>
+            </summary>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.ApiVersionsIntegrationTest.GetAccessAPIWithFilterTest">
+            <summary>
+            use random value in the filter of get method, still expect the 200 back.   
+            The response content is not check as the filter is randomly generated
+            <list type="bullet">
+            <item>
+            <description>/api/versions</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.Configuration">
+            <summary>
+            Configuration for Integation Test     
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.Configuration.#ctor">
+            <summary>
+            consturctor
+            </summary>
+        </member>
+        <member name="P:Unity.Publishing.Api.IntegrationTest.Configuration.BaseUrl">
+            <summary>
+            Base URL for the API Test
+            </summary>
+        </member>
+        <member name="P:Unity.Publishing.Api.IntegrationTest.Configuration.ExistingAuthUserId">
+            <summary>
+            we probaly not need this one.
+            </summary>
+        </member>
+        <member name="T:Unity.Publishing.Api.IntegrationTest.RestAPITest">
+            <summary>
+            Test suite for general test for all endpoint.
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.RestAPITest.StatusCodeOfGetTest">
+            <summary>
+            This test is try to get the status code of API without {*id*} option.
+            All the API paths are read from the API document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.RestAPITest.StatusCodeOfGetWithIdTest">
+            <summary>
+            This test is try to get the status code of API with a {*id*} option. 
+            </summary>
+            <returns></returns>
+            <remarks>
+            However, the implemente of test is not perfect yet  
+            because the {*id*} has different meaning under different context.
+            We only interest in 500 error for now. In any case, there shouldn't a 500 error return.
+            </remarks>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.RestAPITest.InvalidApiKeyTest">
+            <summary>
+            Use an invalid key to access API should return 401 error. 
+            Only works for API without {*id*}
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.RestAPITest.EndpointCheck">
+            <summary>
+            Check if there are any endpoint added/removed
+            Current Available endpoints are hard coded in the testcase.
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:Unity.Publishing.Api.IntegrationTest.RestAPITest.IsApiUpRunning">
+            <summary>
+            Check the whether or not an API is running
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,57 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170620085907
+Username: HQ\jinxu
+RunAs User: HQ\jinxu
+Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11552
+PSVersion: 5.1.15063.413
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.413
+BuildVersion: 10.0.15063.413
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\jinxu\Documents\GitHub\KunaiLog\Frontend.log
+
+
+
+> kunai-frontend@0.1.0 prestart C:\Users\jinxu\Documents\GitHub\Kunai\frontend
+> npm run git-revision
+
+
+> kunai-frontend@0.1.0 git-revision C:\Users\jinxu\Documents\GitHub\Kunai\frontend
+> node git-revision.js
+
+wrote git revision info to file: ./src/git-revision.json
+
+> kunai-frontend@0.1.0 start C:\Users\jinxu\Documents\GitHub\Kunai\frontend
+> ng serve
+
+** NG Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200 **
+Hash: 820a95541215ed813ded
+Time: 19312ms
+chunk    {0} main.bundle.js, main.bundle.js.map (main) 395 kB {3} [initial] [rendered]
+chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial] [rendered]
+chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial] [rendered]
+chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.35 MB [initial] [rendered]
+chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry] [rendered]
+webpack: Compiled successfully.
+webpack: Compiling...
+Hash: 820a95541215ed813ded
+Time: 451ms
+chunk    {0} main.bundle.js, main.bundle.js.map (main) 395 kB {3} [initial]
+chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial]
+chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial]
+chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.35 MB [initial]
+chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry]
+webpack: Compiled successfully.
+Terminate batch job (Y/N)? y
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\jinxu\Documents\GitHub\Kunai\frontend> cd ..
+PS C:\Users\jinxu\Documents\GitHub\Kunai> cd ..

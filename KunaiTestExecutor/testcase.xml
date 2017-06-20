@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Publishing.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Unity.Publishing.IntegrationTests.Framework.CustomAssertionExtensions">
+            <summary>
+            http://www.planetgeek.ch/2012/03/22/how-to-suppress-exceptions-with-fluent-assertions/
+            Can return void too.
+            </summary>
+        </member>
+        <member name="M:Unity.Publishing.IntegrationTests.Framework.RestClient.CreateReleaseTrack(System.String,System.String[],System.String)">
+            <summary>
+            this method can create a release track. Return the ID of that release track to query.
+            </summary>
+            <param name="name">Release track name </param>
+            <param name="branchname">branches name in string array</param>
+            <param name="url">the end point to add release track</param>
+            <returns>the id of new release track</returns>
+        </member>
+    </members>
+</doc>
