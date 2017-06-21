@@ -1,0 +1,10 @@
+$masterfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\"
+$masterdockerfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\docker\"
+$masterfrontendfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\frontend\"
+$testfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\"
+
+$logfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\Log\"
+$backendlogfile = "Backend.log"
+$frontendlogfile = "Frontend.log"
+$updatemasterlogfile = "PullMaster.log"
+$errorcsvfile = "Error.csv"

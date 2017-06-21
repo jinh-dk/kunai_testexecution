@@ -1,8 +1,9 @@
-﻿Push-Location C:\Users\jinxu\Documents\GitHub\Kunai\docker
+﻿. .\setting.ps1
+Push-Location $masterdockerfolder
 # Sometime the Stop-Transcript is not exexucted so that the Start-Transcript cannot start next time
 #Stop-Transcript
-Remove-Item -Force C:\Users\jinxu\Documents\GitHub\KunaiLog\Backend.log
-Start-Transcript -path C:\Users\jinxu\Documents\GitHub\KunaiLog\Backend.log
+Remove-Item -Force $logfolder$backendlogfile
+Start-Transcript -path $logfolder$backendlogfile
 docker-compose -f docker-compose-dbs.yml -f docker-compose-full.yml up
 Stop-Transcript
 Pop-Location

@@ -1,12 +1,4 @@
-﻿.\settings.ps1
-
-$testfwkfolder = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.IntegrationTests.Framework"
-$testfwkproj = "Publishing.IntegrationTests.Framework.csproj"
-#$testreportfolder = "C:\users\jinxu\Documents\GitHub\kunai\test\Log"
-#$testreportname = "integrationTest.xml"
-$testcasefolder_api = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.Api.IntegrationTest"
-$testcaseproj_api = "Publishing.Api.IntegrationTest.csproj"
-
+﻿. .\settings.ps1
 
 Write-Host "Stop ALL running docker containers, and node processes."
 & .\StopAllPowershellProcesses.ps1
@@ -14,7 +6,6 @@ Write-host "Download the lastest artifacts, and rebuild the docker images, and r
 & .\PrepareTest.ps1 -reloadkatana $true
 
 #TODO: Need find a better way to replace hardcode waiting. 
-
 
 Write-Host "Build the latest tests in DEV envionrment"
 Push-Location $testfwkfolder
@@ -41,8 +32,9 @@ Write-Host "Test converage report and server logs are uploaded to Google Drive"
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate
 
-#Todo : Git the lastest file
-python.exe C:\Users\jinxu\Documents\GitHub\ownScript\python\CreateTestcaseOverview\CreateTestOverview.py
-python.exe C:\Users\jinxu\Documents\GitHub\ownScript\python\CreateTestcaseOverview\UploadLogToGDrive.py
+curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
+curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
+python.exe CreateTestOverview.py
+python.exe UploadLogToGDrive.py
 deactivate
 Set-ExecutionPolicy RemoteSigned

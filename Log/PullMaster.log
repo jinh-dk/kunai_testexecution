@@ -1,0 +1,374 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170620230239
+Username: HQ\jinxu
+RunAs User: HQ\jinxu
+Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9352
+PSVersion: 5.1.15063.413
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.413
+BuildVersion: 10.0.15063.413
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\PullMaster.log
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\obj\BlinkSyncLib.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\obj\Publishing.Abstractions.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\obj\Octokit.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\obj\Octokit.csproj.nuget.g.targets.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\obj\Publishing.Abstractions.csproj.nuget.g.targets.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\obj\BlinkSyncLib.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\obj\project.assets.json
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\obj\project.assets.json
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\obj\project.assets.json
+  Restore completed in 1,18 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj.
+  Restore completed in 1,18 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj.
+  Restore completed in 1,18 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\obj\Publishing.Activity.WriteToLog.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\obj\Publishing.Activity.WriteToLog.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\obj\project.assets.json
+  Restore completed in 679,79 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\obj\Publishing.Activity.SendSlackMessage.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\obj\Publishing.Activity.SendSlackMessage.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\obj\project.assets.json
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\obj\Publishing.Activity.SourceCodeHosting.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\obj\Publishing.Activity.PushKallitheaToGithub.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\obj\Publishing.Activity.SourceCodeHosting.csproj.nuget.g.targets.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\obj\Publishing.Activity.PushKallitheaToGithub.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\obj\project.assets.json
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\obj\project.assets.json
+  Restore completed in 2,27 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj...
+  Restore completed in 2,28 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj...
+  Restore completed in 2,28 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\obj\Publishing.Activity.Notifications.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\obj\Publishing.Activity.Notifications.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\obj\project.assets.json
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\obj\Publishing.Activity.Releases.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\obj\Publishing.Activity.Releases.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\obj\project.assets.json
+  Restore completed in 2,44 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj...
+  Restore completed in 2,45 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\Publishing.Abstractions.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\obj\Publishing.Activity.Subscriptions.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\obj\Publishing.Activity.Subscriptions.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\obj\project.assets.json
+  Restore completed in 1,83 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\Publishing.Activity.Notifications.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\obj\Publishing.CodeContracts.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\obj\Publishing.CodeContracts.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\obj\project.assets.json
+  Restore completed in 1,29 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\obj\Publishing.Services.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\obj\Publishing.Services.csproj.nuget.g.targets.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\obj\Publishing.Engine.csproj.nuget.g.props.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\obj\project.assets.json
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\obj\Publishing.Engine.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\obj\project.assets.json
+  Restore completed in 1,43 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj...
+  Restore completed in 1,61 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\Publishing.Activity.Subscriptions.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\obj\Publishing.Migration.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\obj\Publishing.Migration.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\obj\project.assets.json
+  Restore completed in 1,92 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\obj\Publishing.Server.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\obj\Publishing.Server.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\obj\project.assets.json
+  Restore completed in 2,18 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\Publishing.Api.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\obj\Publishing.Api.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\obj\Publishing.Api.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\obj\project.assets.json
+  Restore completed in 3,97 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\Publishing.Engine.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\obj\Publishing.Api.IntegrationTest.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\obj\Publishing.Api.IntegrationTest.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\obj\project.assets.json
+  Restore completed in 1,02 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\obj\Publishing.Abstractions.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\obj\Publishing.Abstractions.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\obj\project.assets.json
+  Restore completed in 3,03 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\Publishing.Abstractions.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\Publishing.Server.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\obj\Publishing.IntegrationTests.Framework.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\obj\Publishing.IntegrationTests.Framework.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\obj\project.assets.json
+  Restore completed in 562,69 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\obj\Publishing.Activity.Notifications.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\obj\Publishing.Activity.Notifications.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\obj\project.assets.json
+  Restore completed in 4,07 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\Publishing.Activity.Notifications.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\Publishing.Services.UnitTests.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\obj\Publishing.Engine.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\obj\Publishing.Engine.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\obj\project.assets.json
+  Restore completed in 1,94 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\Publishing.Engine.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\obj\Publishing.Services.IntegrationTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\obj\Publishing.Services.IntegrationTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\obj\project.assets.json
+  Restore completed in 1,78 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\obj\Publishing.Server.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\obj\Publishing.Server.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\obj\project.assets.json
+  Restore completed in 2,32 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\Publishing.Server.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj...
+  Restore completed in 835,82 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj...
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\obj\Publishing.Api.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\obj\Publishing.Api.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\obj\project.assets.json
+  Restore completed in 3,71 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\Publishing.Api.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj...
+  Restore completed in 829,15 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj.
+  Restore completed in 813,87 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restore completed in 765,72 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 692,1 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\obj\Publishing.Activity.Releases.IntegrationTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\obj\Publishing.Activity.Releases.IntegrationTests.csproj.nuget.g.targets
+.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\obj\Publishing.Services.UnitTests.csproj.nuget.g.props.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\obj\project.assets.json
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\obj\Publishing.Services.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\obj\project.assets.json
+  Restore completed in 5,76 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj.
+  Restore completed in 1,84 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\Publishing.Services.UnitTests.csproj.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\obj\Publishing.Activity.Releases.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\obj\Publishing.Activity.Releases.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\obj\project.assets.json
+  Restore completed in 6,27 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\obj\Publishing.Activity.Subscriptions.UnitTests.csproj.nuget.g.props.
+  Generating MSBuild file C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\obj\Publishing.Activity.Subscriptions.UnitTests.csproj.nuget.g.targets.
+  Writing lock file to disk. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\obj\project.assets.json
+  Restore completed in 7,56 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\Publishing.Activity.Subscriptions.UnitTests.csproj.
+
+  NuGet Config files used:
+      C:\Users\jinxu\AppData\Roaming\NuGet\NuGet.Config
+      C:\Program Files (x86)\NuGet\Config\Microsoft.VisualStudio.Offline.config
+
+  Feeds used:
+      https://api.nuget.org/v3/index.json
+      C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+Preparing to run build script...
+Running build script...
+Analyzing build script...
+Processing build script...
+Installing tools...
+Installing addins...
+Downloading and installing Roslyn...
+Installing packages (using https://packages.nuget.org/api/v2)...
+Copying files...
+Copying Roslyn.Compilers.CSharp.dll...
+Copying Roslyn.Compilers.dll...
+Deleting installation directory...
+Compiling build script...
+Setting up task: Restore
+
+========================================
+Restore
+========================================
+Executing task: Restore
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\obj\project.assets.json
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\obj\project.assets.json
+  Restore completed in 482,74 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj.
+  Restore completed in 482,74 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\obj\project.assets.json
+  Restore completed in 482,72 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\obj\project.assets.json
+  Restore completed in 281,37 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\obj\project.assets.json
+  Restore completed in 1,21 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\obj\project.assets.json
+  Restore completed in 1,21 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\obj\project.assets.json
+  Restore completed in 1,22 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\obj\project.assets.json
+  Restore completed in 539,37 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\obj\project.assets.json
+  Restore completed in 1,38 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\Publishing.Abstractions.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\obj\project.assets.json
+  Restore completed in 1,43 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\Publishing.Activity.Notifications.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\obj\project.assets.json
+  Restore completed in 1,23 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\obj\project.assets.json
+  Restore completed in 1,03 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\obj\project.assets.json
+  Restore completed in 1,24 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\Publishing.Activity.Subscriptions.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\obj\project.assets.json
+  Restore completed in 1,14 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\Publishing.Abstractions.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\obj\project.assets.json
+  Restore completed in 1,72 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\Publishing.Api.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\obj\project.assets.json
+  Restore completed in 2,24 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\obj\project.assets.json
+  Restore completed in 950,63 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\Publishing.Engine.UnitTests.csproj...
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\obj\project.assets.json
+  Restore completed in 2,12 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\Publishing.Activity.Notifications.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\Publishing.Server.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\obj\project.assets.json
+  Restore completed in 244,57 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\obj\project.assets.json
+  Restore completed in 2,19 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\Publishing.Services.UnitTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\obj\project.assets.json
+  Restore completed in 2,03 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\Publishing.Activity.Subscriptions.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\obj\project.assets.json
+  Restore completed in 2,12 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\Publishing.Activity.Releases.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\obj\project.assets.json
+  Restore completed in 4,76 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\obj\project.assets.json
+  Restore completed in 1,82 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\Publishing.Engine.UnitTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\obj\project.assets.json
+  Restore completed in 1,62 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restoring packages for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj...
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\obj\project.assets.json
+  Restore completed in 1,5 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\Publishing.Services.UnitTests.csproj.
+  Restore completed in 1,02 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restore completed in 1,08 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\obj\project.assets.json
+  Restore completed in 2,19 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\Publishing.Server.UnitTests.csproj.
+  Restore completed in 758,83 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restore completed in 757,23 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 675,11 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\obj\project.assets.json
+  Restore completed in 3,48 sec for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\Publishing.Api.UnitTests.csproj.
+
+  NuGet Config files used:
+      C:\Users\jinxu\AppData\Roaming\NuGet\NuGet.Config
+      C:\Program Files (x86)\NuGet\Config\Microsoft.VisualStudio.Offline.config
+
+  Feeds used:
+      https://api.nuget.org/v3/index.json
+      C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+Finished executing task: Restore
+Tearing down task: Restore
+Setting up task: Build
+
+========================================
+Build
+========================================
+Executing task: Build
+Microsoft (R) Build Engine version 15.1.1012.6693
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Publishing.Abstractions -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\bin\Debug\netstandard1.6\Publishing.Abstractions.dll
+  Publishing.Abstractions.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Abstractions.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Abstractions.UnitTests.dll
+  Octokit -> C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\bin\Debug\netstandard1.6\Octokit.dll
+  Publishing.Services -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\bin\Debug\netstandard1.6\Publishing.Services.dll
+  Publishing.Services.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Services.UnitTests.dll
+  Publishing.Engine -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\bin\Debug\netstandard1.6\Publishing.Engine.dll
+  Publishing.Engine.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Engine.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Engine.UnitTests.dll
+  Publishing.Activity.Notifications -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\bin\Debug\netstandard1.6\Publishing.Activity.Notifications.dll
+  BlinkSyncLib -> C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\bin\Debug\netstandard1.6\BlinkSyncLib.dll
+  Publishing.Activity.PushKallitheaToGithub -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\bin\Debug\netstandard1.6\Publishing.Activity.PushKallit
+  heaToGithub.dll
+  Publishing.Activity.Releases -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\bin\Debug\netstandard1.6\Publishing.Activity.Releases.dll
+  Publishing.Activity.SendSlackMessage -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\bin\Debug\netstandard1.6\Publishing.Activity.SendSlackMessage.dll
+  Publishing.Activity.SourceCodeHosting -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\bin\Debug\netstandard1.6\Publishing.Activity.SourceCodeHosting.
+  dll
+  Publishing.Activity.Subscriptions -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\bin\Debug\netstandard1.6\Publishing.Activity.Subscriptions.dll
+  Publishing.Activity.WriteToLog -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\bin\Debug\netstandard1.6\Publishing.Activity.WriteToLog.dll
+  Publishing.Server -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\bin\Debug\netcoreapp1.1\Publishing.Server.dll
+  Publishing.Api -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\bin\Debug\netcoreapp1.1\Publishing.Api.dll
+  Publishing.Api.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Api.UnitTests.dll
+  Publishing.Migration -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\bin\Debug\netcoreapp1.1\Publishing.Migration.dll
+  Publishing.Services.IntegrationTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\bin\Debug\netcoreapp1.1\Publishing.Services.IntegrationTests.dll
+  Publishing.Activity.Subscriptions.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Subscriptions.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Activity.Subscr
+  iptions.UnitTests.dll
+  Publishing.Activity.Notifications.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Notifications.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Activity.Notifi
+  cations.UnitTests.dll
+  Publishing.IntegrationTests.Framework -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\bin\Debug\netstandard1.6\Publishing.Abstractions.dll
+  Publishing.Api.IntegrationTest -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\bin\Debug\netcoreapp1.1\Publishing.Api.IntegrationTest.dll
+  Publishing.CodeContracts -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\bin\Debug\netcoreapp1.1\Publishing.CodeContracts.dll
+  Publishing.Activity.Releases.IntegrationTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\bin\Debug\netcoreapp1.1\Publishing.Activity.Re
+  leases.IntegrationTests.dll
+  Publishing.Activity.Releases.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Activity.Releases.UnitTes
+  ts.dll
+  Publishing.Server.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.UnitTests\bin\Debug\netcoreapp1.1\Publishing.Server.UnitTests.dll
+Finished executing task: Build
+Tearing down task: Build
+Setting up task: Default
+
+========================================
+Default
+========================================
+Executing task: Default
+Finished executing task: Default
+Tearing down task: Default
+
+Task                          Duration
+--------------------------------------------------
+Restore                       00:00:09.9119656
+Build                         00:00:28.6329511
+Default                       00:00:00.0062664
+--------------------------------------------------
+Total:                        00:00:38.5511831
+**********************
+Windows PowerShell transcript end
+End time: 20170620230357
+**********************

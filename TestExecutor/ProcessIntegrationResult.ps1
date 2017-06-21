@@ -4,7 +4,8 @@
 
 # Slackbot is running in virtualenv. 
 
-.\settings.ps1
+. .\settings.ps1
+. ..\settings.ps1
 
 $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 #$ReportFolder = "C:\Users\jinxu\Documents\GitHub\KunaiTestExecutor\"
@@ -14,7 +15,7 @@ $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 Write-host("**************   Reporting *******************")
 
 $testcases = $IntegrationTestResult.assemblies.assembly.collection.test
-$olderror = Import-Csv C:\Users\jinxu\Documents\GitHub\KunaiLog\Error.csv
+$olderror = Import-Csv $logfolder$errorcsvfile
 $newerror = @()
 $errorcounter = 0
 $ErrorFileId = "1YCdJoTGPLcFuePoqY5MrNUUR_t6F_WJ6jRHsxMPYzh8"
@@ -22,7 +23,8 @@ $range = "A1:Z1000"
 
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate        
-python.exe C:\Users\jinxu\Documents\GitHub\ownScript\python\CreateTestcaseOverview\ClearSpreadSheet.py $ErrorFileId $range 
+curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
+python.exe ClearSpreadSheet.py $ErrorFileId $range 
 deactivate
 Set-ExecutionPolicy RemoteSigned
 
@@ -42,8 +44,9 @@ foreach($testcase in $testcases) {
         
         $range = "A$errorcounter" + ":B$errorcounter"        
         Set-ExecutionPolicy Unrestricted
-        .\GoogleSpreadSheet\Scripts\activate        
-        python.exe C:\Users\jinxu\Documents\GitHub\ownScript\python\CreateTestcaseOverview\UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
+        .\GoogleSpreadSheet\Scripts\activate       
+        curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVToGDrive.py
+        python.exe UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
         deactivate
         Set-ExecutionPolicy RemoteSigned
         
@@ -69,6 +72,7 @@ foreach($testcase in $testcases) {
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
             #pip install slackclient
+            curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/SendErrorToSlack.py            
             python.exe .\SendErrorToSlack.py "$ErrorMessage"
             deactivate
             Set-ExecutionPolicy RemoteSigned        
@@ -78,4 +82,4 @@ foreach($testcase in $testcases) {
     }
 }
 
-$newerror | Export-Csv -Path C:\Users\jinxu\Documents\GitHub\KunaiLog\Error.csv -NoTypeInformation
+$newerror | Export-Csv -Path $logfolder$errorcsvfile -NoTypeInformation

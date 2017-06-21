@@ -2,9 +2,11 @@
     [switch] $reloadkatana = $false
 )
 
-$scriptfolder = "C:\Users\jinxu\Documents\GitHub"
-Push-Location $scriptfolder
-.\deleteDockerSetup.ps1 $reloadkatana
+. .\settings.ps1
+. ..\settings.ps1
+
+Push-Location $testfolder
+.\deleteDockerSetup.ps1 -reloadkatana $reloadkatana
 .\pullMaster.ps1
 &.\runKunai.ps1
 Pop-Location
