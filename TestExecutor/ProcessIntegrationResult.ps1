@@ -7,7 +7,7 @@
 . .\settings.ps1
 
 $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
-[xml]$IntegrationTestResult = Get-Content $testresultfolder$testreportname
+[xml]$IntegrationTestResult = Get-Content $testresultfolder$testresultname
 
 Write-host("**************   Reporting *******************")
 
@@ -20,7 +20,7 @@ $range = "A1:Z1000"
 
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate        
-curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
+curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
 python.exe ClearSpreadSheet.py $ErrorFileId $range 
 deactivate
 Set-ExecutionPolicy RemoteSigned
@@ -42,7 +42,7 @@ foreach($testcase in $testcases) {
         $range = "A$errorcounter" + ":B$errorcounter"        
         Set-ExecutionPolicy Unrestricted
         .\GoogleSpreadSheet\Scripts\activate       
-        curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVToGDrive.py
+        curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVtoGDrive.py
         python.exe UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
         deactivate
         Set-ExecutionPolicy RemoteSigned
@@ -69,7 +69,7 @@ foreach($testcase in $testcases) {
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
             #pip install slackclient
-            curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/SendErrorToSlack.py            
+            #curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/SendSlackMessage.py
             python.exe .\SendErrorToSlack.py "$ErrorMessage"
             deactivate
             Set-ExecutionPolicy RemoteSigned        

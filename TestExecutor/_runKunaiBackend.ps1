@@ -1,4 +1,4 @@
-﻿. .\setting.ps1
+﻿. .\settings.ps1
 Push-Location $masterdockerfolder
 # Sometime the Stop-Transcript is not exexucted so that the Start-Transcript cannot start next time
 #Stop-Transcript

@@ -4,7 +4,7 @@
 /api/authusers,0,0
 /api/authusers/{id}/deactivate,0,0
 /api/authusers/{id}/activate,0,0
-/api/builds,3,0
+/api/builds,3,1
 /api/builds/ci,1,0
 /api/builds/{id},1,0
 /api/builds/{id}/promote,1,0

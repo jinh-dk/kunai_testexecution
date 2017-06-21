@@ -9,14 +9,16 @@ Write-host "Download the lastest artifacts, and rebuild the docker images, and r
 
 Write-Host "Build the latest tests in DEV envionrment"
 Push-Location $testfwkfolder
+dotnet restore
 dotnet build $testfwkproj
 Pop-Location
 
 Write-Host "Exeucte all stable testcase, and write the result to an XML file"
-Remove-Item -Force $testreportfolder$testreportname
+Remove-Item -Force $testresultfolder$testresultname
 Push-Location $testcasefolder_api
+dotnet restore
 dotnet build $testcaseproj_api
-dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresultfolder$testreportname
+dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresultfolder$testresultname
 
 Pop-Location
 
@@ -24,7 +26,7 @@ Write-Host "Parse the test report, and send the Error message to Slack channel"
 & .\ProcessIntegrationResult.ps1
 Write-Host "Stop ALL running docker containers, and node processes."
 .\StopAllPowershellProcesses.ps1
-Start-Sleep -s 60
+#Start-Sleep -s 60
 
 
 Write-Host "Test converage report and server logs are uploaded to Google Drive"
@@ -33,8 +35,8 @@ Write-Host "Test converage report and server logs are uploaded to Google Drive"
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate
 
-curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
-curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
+curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
+curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
 python.exe CreateTestOverview.py
 python.exe UploadLogToGDrive.py $logfolder$backendlogfile $backendlogfileid
 python.exe UploadLogToGDrive.py $logfolder$frontendlogfile $frontendlogfileid
