@@ -10,3 +10,4 @@ ClearSpreadSheet.py
 CreateTestOverview.py
 UploadCSVToGDrive.py
 UploadLogToGDrive.py
+*.log

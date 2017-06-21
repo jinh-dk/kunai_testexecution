@@ -25,3 +25,6 @@ $frontendlogfile = "Frontend.log"
 $frontendlogfileid = "1CmjkWFjPUQZJmEHqgnFhruFMyfR2Gxm8EDGmUKPaMbY"
 $updatemasterlogfile = "PullMaster.log"
 $errorcsvfile = "Error.csv"
+
+$teamslackchannel = "G396UA2RY"
+$ownslackChannel = "@jinxu"

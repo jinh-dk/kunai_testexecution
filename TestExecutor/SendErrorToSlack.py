@@ -6,6 +6,10 @@ import time, os, sys
 from slackclient import SlackClient
 
 errmsg = sys.argv[1]
+if (sys.argv[2]):
+    channel = sys.argv[2]
+else:
+    channel = "@jinxu"    
 
 f = open('slacktoken.txt', 'r')
 token = f.read()
@@ -14,7 +18,8 @@ f.close()
 botToken = token
 botUsername = "@jinxu"
 #botChannel = "G396UA2RY"  # pack-distribute
-botChannel = "@jinxu"    # own slackbot
+#botChannel = "@jinxu"    # own slackbot
+botChannel = channel
 
 #f = open('errorfile.txt', 'r');
 

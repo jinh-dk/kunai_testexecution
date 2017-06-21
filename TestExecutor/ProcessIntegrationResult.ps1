@@ -18,6 +18,7 @@ $errorcounter = 0
 $ErrorFileId = "1YCdJoTGPLcFuePoqY5MrNUUR_t6F_WJ6jRHsxMPYzh8"
 $range = "A1:Z1000"
 
+# Remove the content in the spreadsheet, so only new contents in the spreadsheet.
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate        
 curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
@@ -37,30 +38,40 @@ foreach($testcase in $testcases) {
         $ErrorMessage = $testcase.failure.message.'#cdata-section' 
 
         
-        ## Send the error to Spread sheet, and local machine        
-        
+        ## Send the error to Spreadsheet, and local machine                
         $range = "A$errorcounter" + ":B$errorcounter"        
         Set-ExecutionPolicy Unrestricted
+        
         .\GoogleSpreadSheet\Scripts\activate       
         curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVtoGDrive.py
         python.exe UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
         deactivate
+
+        #send the error to own slack channel
+        .\slack\Scripts\activate     
+        if ($ErrorMessage.length -gt 360) {
+            $msg = $ErrorMessage.subString(0, 359)
+        } else {
+            $msg = $ErrorMessage
+        }
+        python.exe .\SendErrorToSlack.py "$msg" $ownslackChannel
+        deactivate
+
         Set-ExecutionPolicy RemoteSigned
         
-        #Recorde the new error
+        #Record the new error
         $details = @{
             Testcase = $TestcaseFullPath
             ErrorMessage =  $ErrorMessage
         }
-
         $newerror += New-Object PSObject -Property $details        
 
-        ## Check if the error is an old one##
+        ## Check if the error is already known yesterday##
         if ( $olderror.Testcase.Contains($TestcaseFullPath) -and $olderror.ErrorMessage.Contains($ErrorMessage) ) {              
             $sendslack = $false
         }
                         
-        ## Only send new error to slack
+        ## If a new error, send it to team slack channel
         if ($sendslack) {
             if ($ErrorMessage.length -gt 360) {
                 $ErrorMessage = $ErrorMessage.subString(0, 359)
@@ -68,9 +79,8 @@ foreach($testcase in $testcases) {
             $ErrorMessage = $TestcaseFullPath + ":" + $ErrorMessage
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
-            #pip install slackclient
-            #curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/SendSlackMessage.py
-            python.exe .\SendErrorToSlack.py "$ErrorMessage"
+            #pip install slackclient            
+            python.exe .\SendErrorToSlack.py "$ErrorMessage" $teamslackchannel
             deactivate
             Set-ExecutionPolicy RemoteSigned        
         }        
