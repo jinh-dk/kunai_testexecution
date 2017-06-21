@@ -16,7 +16,8 @@ Write-Host "Exeucte all stable testcase, and write the result to an XML file"
 Remove-Item -Force $testreportfolder$testreportname
 Push-Location $testcasefolder_api
 dotnet build $testcaseproj_api
-dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testreportfolder$testreportname
+dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresultfolder$testreportname
+
 Pop-Location
 
 Write-Host "Parse the test report, and send the Error message to Slack channel"
@@ -35,6 +36,8 @@ Set-ExecutionPolicy Unrestricted
 curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
 curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
 python.exe CreateTestOverview.py
-python.exe UploadLogToGDrive.py
+python.exe UploadLogToGDrive.py $logfolder$backendlogfile $backendlogfileid
+python.exe UploadLogToGDrive.py $logfolder$frontendlogfile $frontendlogfileid
+
 deactivate
 Set-ExecutionPolicy RemoteSigned

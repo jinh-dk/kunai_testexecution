@@ -5,12 +5,9 @@
 # Slackbot is running in virtualenv. 
 
 . .\settings.ps1
-. ..\settings.ps1
 
 $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
-#$ReportFolder = "C:\Users\jinxu\Documents\GitHub\KunaiTestExecutor\"
-#$Reportname = "integrationTest.xml"
-[xml]$IntegrationTestResult = Get-Content $testreportfolder$testreportname
+[xml]$IntegrationTestResult = Get-Content $testresultfolder$testreportname
 
 Write-host("**************   Reporting *******************")
 
