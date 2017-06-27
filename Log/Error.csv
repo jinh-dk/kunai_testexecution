@@ -1,2 +1,4 @@
 "Testcase","ErrorMessage"
 "Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.UpdateReleaseTrackTest","message: Expected object to be OK because /api/releasetracks/branchupdate should return code OK, but found InternalServerError.; \r\nExpected object to be OK because /api/releasetracks/branchcheck should return code OK, but found InternalServerError.\r\nExpected: True\r\nActual:   False"
+"Unity.Publishing.Api.IntegrationTest.RestAPITest.EndpointCheck","System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\jinxu\\Documents\\GitHub\\KunaiTestExecutor\\APIs.txt'."
+"Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.BuildsWithKatanaTest","System.Exception : InternalServerError is unexpected"

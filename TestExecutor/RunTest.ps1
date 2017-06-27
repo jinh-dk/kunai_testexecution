@@ -1,9 +1,14 @@
-﻿. .\settings.ps1
+﻿param (
+    [switch] $localtestmode = $false,
+    [switch] $reloadkatana = $true
+)
+
+. .\settings.ps1
 
 Write-Host "Stop ALL running docker containers, and node processes."
 & .\StopAllPowershellProcesses.ps1
 Write-host "Download the lastest artifacts, and rebuild the docker images, and restart containers."
-& .\PrepareTest.ps1 -reloadkatana $true
+& .\PrepareTest.ps1 -reloadkatana $reloadkatana
 
 #TODO: Need find a better way to replace hardcode waiting. 
 
@@ -23,7 +28,7 @@ dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresult
 Pop-Location
 
 Write-Host "Parse the test report, and send the Error message to Slack channel"
-& .\ProcessIntegrationResult.ps1
+& .\ProcessIntegrationResult.ps1 $localtestmode
 Write-Host "Stop ALL running docker containers, and node processes."
 .\StopAllPowershellProcesses.ps1
 #Start-Sleep -s 60
