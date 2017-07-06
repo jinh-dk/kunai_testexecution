@@ -5,7 +5,7 @@
 # Slackbot is running in virtualenv. 
 
 param(
-    [switch] $localtestmode = $false
+    [switch] $localdebugmode = $false
 )
 
 . .\settings.ps1
@@ -14,7 +14,7 @@ $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 [xml]$IntegrationTestResult = Get-Content $testresultfolder$testresultname
 
 Write-host("**************   Reporting *******************")
-if ($localtestmode) {
+if ($localdebugmode) {
     Write-host("** In Debug mode. **")
 }
 
@@ -79,7 +79,7 @@ foreach($testcase in $testcases) {
         }
                         
         ## If a new error, send it to team slack channel
-        if ($sendslack -and (-not $localtestmode)) {
+        if ($sendslack -and (-not $localdebugmode)) {
             if ($ErrorMessage.length -gt 360) {
                 $ErrorMessage = $ErrorMessage.subString(0, 359)
             }

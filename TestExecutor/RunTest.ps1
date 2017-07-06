@@ -1,9 +1,14 @@
 ﻿param (
-    [switch] $localtestmode = $false,
+    [switch] $localdebugmode = $false,
     [switch] $reloadkatana = $true
 )
 
 . .\settings.ps1
+
+if ($localdebugmode) 
+{
+    Write-Host "Run Test in Debug mode "
+}
 
 Write-Host "Stop ALL running docker containers, and node processes."
 & .\StopAllPowershellProcesses.ps1
@@ -28,9 +33,12 @@ dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresult
 Pop-Location
 
 Write-Host "Parse the test report, and send the Error message to Slack channel"
-& .\ProcessIntegrationResult.ps1 $localtestmode
-Write-Host "Stop ALL running docker containers, and node processes."
-.\StopAllPowershellProcesses.ps1
+& .\ProcessIntegrationResult.ps1 -localdebugmode $localdebugmode 
+
+if (-not $localdebugmode){
+    Write-Host "Stop ALL running docker containers, and node processes."
+    .\StopAllPowershellProcesses.ps1
+}
 #Start-Sleep -s 60
 
 

@@ -1,4 +1,5 @@
 "Testcase","ErrorMessage"
 "Unity.Publishing.Api.IntegrationTest.ApiReleaseTracksIntegrationTest.UpdateReleaseTrackTest","message: Expected object to be OK because /api/releasetracks/branchupdate should return code OK, but found InternalServerError.; \r\nExpected object to be OK because /api/releasetracks/branchcheck should return code OK, but found InternalServerError.\r\nExpected: True\r\nActual:   False"
-"Unity.Publishing.Api.IntegrationTest.RestAPITest.EndpointCheck","System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\\Users\\jinxu\\Documents\\GitHub\\KunaiTestExecutor\\APIs.txt'."
 "Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.BuildsWithKatanaTest","System.Exception : InternalServerError is unexpected"
+"Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.PromoteBuildTest","message: Expected string to be \""3\"" because A promoted build#0 should have status 3, but \""1\"" differs near \""1\"" (index 0).\r\nExpected: True\r\nActual:   False"
+"Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.PublishBuildTest","Newtonsoft.Json.JsonReaderException : Error reading JObject from JsonReader. Path '', line 0, position 0."

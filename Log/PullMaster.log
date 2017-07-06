@@ -1,11 +1,11 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170627142102
+Start time: 20170706125144
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 19740
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18412
 PSVersion: 5.1.15063.413
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.413
@@ -18,75 +18,66 @@ SerializationVersion: 1.1.0.1
 Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\PullMaster.log
 
 
-PS>TerminatingError(): "The pipeline has been stopped."
+Preparing to run build script...
+Running build script...
+
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\jinxu\Documents\GitHub\kunai\master> ls
-
-
-    Directory: C:\Users\jinxu\Documents\GitHub\kunai\master
-
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
-d-----       21-06-2017     09:49                .vscode
-d-----       21-06-2017     12:40                docker
-d-----       26-06-2017     02:00                docs
-d-----       21-06-2017     10:03                frontend
-d-----       21-06-2017     09:49                libs
-d-----       21-06-2017     09:49                src
-d-----       21-06-2017     09:49                templates
-d-----       21-06-2017     09:49                test
-d-----       21-06-2017     09:50                tools
--a----       21-06-2017     09:49           1297 .editorconfig
--a----       21-06-2017     09:49            888 .gitattributes
--a----       21-06-2017     09:49           4697 .gitignore
--a----       26-06-2017     02:00            202 appveyor.yml
--a----       21-06-2017     09:49           3249 build.cake
--a----       21-06-2017     09:49           6089 build.ps1
--a----       21-06-2017     09:49           2935 build.sh
--a----       21-06-2017     09:49           5824 GlobalSuppressions.cs
--a----       27-06-2017     14:19           3060 jobs.Docker.json
--a----       27-06-2017     14:19          29263 jobs.json
--a----       21-06-2017     09:49          21798 Kunai.sln
--a----       26-06-2017     02:00           1737 README.md
--a----       21-06-2017     09:49           1768 UnitySourceUser_documentation.md
-
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\jinxu\Documents\GitHub\kunai\master> .\RunTest.ps1 -localdebugmode $true
+.\RunTest.ps1 : The term '.\RunTest.ps1' is not recognized as the name of a cmdlet, function, script file, or operable p
+rogram. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\RunTest.ps1 -localdebugmode $true
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\RunTest.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+.\RunTest.ps1 : The term '.\RunTest.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\RunTest.ps1 -localdebugmode $true
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\RunTest.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
 
 PS C:\Users\jinxu\Documents\GitHub\kunai\master> Pop-Location
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> ls
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
+Run Test
+Stop ALL running docker containers, and node processes.
+
+Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
+At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
++ $processes = Get-Process -Name "node"
++              ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
+At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
++ $processes = Get-Process -Name "node"
++              ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+Download the lastest artifacts, and rebuild the docker images, and restart containers.
 
 
-    Directory: C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor
 
 
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
-d-----       20-06-2017     15:43                GoogleSpreadSheet
-d-----       20-06-2017     15:43                slack
--a----       27-06-2017     08:52           2580 ClearSpreadSheet.py
--a----       24-05-2017     15:54            434 client_secret.json
--a----       27-06-2017     08:53           7268 CreateTestOverview.py
--a----       21-06-2017     09:40            685 deleteDockerSetup.ps1
--a----       21-06-2017     09:40            278 PrepareTest.ps1
--a----       27-06-2017     08:48           3525 ProcessIntegrationResult.ps1
--a----       21-06-2017     09:40            260 pullMaster.ps1
--a----       21-06-2017     09:40            193 runKunai.ps1
--a----       27-06-2017     08:53           1887 RunTest.ps1
--a----       21-06-2017     13:49            940 SendErrorToSlack.py
--a----       21-06-2017     13:54           1221 settings.ps1
--a----       21-06-2017     20:17             74 slacktoken.txt
--a----       18-05-2017     12:31            336 StopAllPowershellProcesses.ps1
--a----       27-06-2017     08:53           2926 UploadCSVToGDrive.py
--a----       27-06-2017     08:53           2828 UploadLogToGDrive.py
--a----       21-06-2017     09:57            372 _runKunaiBackend.ps1
--a----       21-06-2017     09:40            370 _RunKunaiFrontend.ps1
 
 
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> npp ..\..\..\..\
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -debugmode $true
+
+
+
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
+Run Test in Debug mode
 Stop ALL running docker containers, and node processes.
 
 Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
@@ -116,5 +107,5 @@ Download the lastest artifacts, and rebuild the docker images, and restart conta
 
 **********************
 Windows PowerShell transcript end
-End time: 20170627142449
+End time: 20170706125300
 **********************
