@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170706094220
+Start time: 20170707092335
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
@@ -32,8 +32,8 @@ wrote git revision info to file: ./src/git-revision.json
 > ng serve
 
 ** NG Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200 **
-Hash: 80a75c9f7381008028ea
-Time: 20846ms
+Hash: 7083ebc51d4b010d7aa2
+Time: 22833ms
 chunk    {0} main.bundle.js, main.bundle.js.map (main) 396 kB {3} [initial] [rendered]
 chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial] [rendered]
 chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial] [rendered]
@@ -41,21 +41,16 @@ chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.34 MB [initial] [
 chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry] [rendered]
 webpack: Compiled successfully.
 webpack: Compiling...
-Hash: 80a75c9f7381008028ea
-Time: 486ms
+Hash: 7083ebc51d4b010d7aa2
+Time: 833ms
 chunk    {0} main.bundle.js, main.bundle.js.map (main) 396 kB {3} [initial]
 chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial]
 chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial]
 chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.34 MB [initial]
 chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry]
 webpack: Compiled successfully.
-Terminate batch job (Y/N)? Y
-PS>TerminatingError(): "The pipeline has been stopped."
+Terminate batch job (Y/N)? y
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
 >> TerminatingError(): "The pipeline has been stopped."
 PS C:\Users\jinxu\Documents\GitHub\kunai\master\frontend> Pop-Location
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\_RunKunaiFrontend.ps1
-**********************
-Windows PowerShell transcript end
-End time: 20170706125921
-**********************

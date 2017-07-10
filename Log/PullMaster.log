@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170706125144
+Start time: 20170710095105
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
@@ -21,91 +21,7 @@ Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Lo
 Preparing to run build script...
 Running build script...
 
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\jinxu\Documents\GitHub\kunai\master> .\RunTest.ps1 -localdebugmode $true
-.\RunTest.ps1 : The term '.\RunTest.ps1' is not recognized as the name of a cmdlet, function, script file, or operable p
-rogram. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-At line:1 char:1
-+ .\RunTest.ps1 -localdebugmode $true
-+ ~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (.\RunTest.ps1:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-.\RunTest.ps1 : The term '.\RunTest.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-At line:1 char:1
-+ .\RunTest.ps1 -localdebugmode $true
-+ ~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (.\RunTest.ps1:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
-PS C:\Users\jinxu\Documents\GitHub\kunai\master> Pop-Location
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
-Run Test
-Stop ALL running docker containers, and node processes.
-
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
-
-Download the lastest artifacts, and rebuild the docker images, and restart containers.
-
-
-
-
-
-
-
-
-
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
-Run Test in Debug mode
-Stop ALL running docker containers, and node processes.
-
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:4 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
-
-Download the lastest artifacts, and rebuild the docker images, and restart containers.
-
-
-
-
-
-
-
-
-
-
-
 **********************
 Windows PowerShell transcript end
-End time: 20170706125300
+End time: 20170710095147
 **********************

@@ -35,6 +35,11 @@ Pop-Location
 Write-Host "Parse the test report, and send the Error message to Slack channel"
 & .\ProcessIntegrationResult.ps1 -localdebugmode $localdebugmode 
 
+Push-Location $logfolder
+$d = Get-Date -Format yyyyMMdd
+docker cp $dockerserver$serverlogpath/log-$d.txt . 
+Pop-Location
+
 if (-not $localdebugmode){
     Write-Host "Stop ALL running docker containers, and node processes."
     .\StopAllPowershellProcesses.ps1

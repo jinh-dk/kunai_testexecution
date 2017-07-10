@@ -4,11 +4,11 @@
 /api/authusers,0,0
 /api/authusers/{id}/deactivate,0,0
 /api/authusers/{id}/activate,0,0
-/api/builds,3,1
+/api/builds,3,0
 /api/builds/ci,1,0
 /api/builds/{id},1,0
-/api/builds/{id}/promote,1,1
-/api/builds/{id}/publish,1,1
+/api/builds/{id}/promote,1,0
+/api/builds/{id}/publish,1,0
 /hangfire-login,0,0
 /api/health,0,0
 /api/health/full,0,0

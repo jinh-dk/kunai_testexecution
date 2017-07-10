@@ -28,3 +28,6 @@ $errorcsvfile = "Error.csv"
 
 $teamslackchannel = "G396UA2RY"
 $ownslackChannel = "@jinxu"
+
+$dockerserver = "docker_server_1"
+$serverlogpath = ":/app/src/Publishing.Server/logs"
