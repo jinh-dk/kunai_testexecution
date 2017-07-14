@@ -1127,3 +1127,91 @@ Mode                LastWriteTime         Length Name
 -a----       30-06-2017     09:29      334958040 twistd_0630
 
 
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\Log> dir
+
+
+    Directory: C:\Users\jinxu\Documents\GitHub\kunai\test\Log
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10-07-2017     10:57          72398 Backend.log
+-a----       11-07-2017     02:26            412 Error.csv
+-a----       07-07-2017     11:36           2536 Frontend.log
+-a----       06-07-2017     10:30            904 log-20170706.txt
+-a----       10-07-2017     10:57         270793 log-20170710.txt
+-a----       11-07-2017     02:26         193432 log-20170711.txt
+-a----       03-07-2017     10:23           7034 master.cfg
+-a----       11-07-2017     02:01          38985 PullMaster.log
+-a----       04-07-2017     09:03          10759 twistd-20170703.log
+-a----       04-07-2017     10:32       37816768 twistd.log
+-a----       03-07-2017     08:29        7454677 twistd0703
+-a----       30-06-2017     09:29      334958040 twistd_0630
+
+
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\Log> dir
+
+
+    Directory: C:\Users\jinxu\Documents\GitHub\kunai\test\Log
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10-07-2017     10:57          72398 Backend.log
+-a----       11-07-2017     02:26            412 Error.csv
+-a----       07-07-2017     11:36           2536 Frontend.log
+-a----       06-07-2017     10:30            904 log-20170706.txt
+-a----       10-07-2017     10:57         270793 log-20170710.txt
+-a----       11-07-2017     02:26         193432 log-20170711.txt
+-a----       03-07-2017     10:23           7034 master.cfg
+-a----       11-07-2017     02:01          38985 PullMaster.log
+-a----       04-07-2017     09:03          10759 twistd-20170703.log
+-a----       04-07-2017     10:32       37816768 twistd.log
+-a----       03-07-2017     08:29        7454677 twistd0703
+-a----       30-06-2017     09:29      334958040 twistd_0630
+
+
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\Log> dir
+
+
+    Directory: C:\Users\jinxu\Documents\GitHub\kunai\test\Log
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10-07-2017     10:57          72398 Backend.log
+-a----       11-07-2017     02:26            412 Error.csv
+-a----       07-07-2017     11:36           2536 Frontend.log
+-a----       06-07-2017     10:30            904 log-20170706.txt
+-a----       10-07-2017     10:57         270793 log-20170710.txt
+-a----       11-07-2017     02:26         193432 log-20170711.txt
+-a----       03-07-2017     10:23           7034 master.cfg
+-a----       11-07-2017     02:01          38985 PullMaster.log
+-a----       04-07-2017     09:03          10759 twistd-20170703.log
+-a----       04-07-2017     10:32       37816768 twistd.log
+-a----       03-07-2017     08:29        7454677 twistd0703
+-a----       30-06-2017     09:29      334958040 twistd_0630
+
+
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\Log> dir
+
+
+    Directory: C:\Users\jinxu\Documents\GitHub\kunai\test\Log
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10-07-2017     10:57          72398 Backend.log
+-a----       11-07-2017     02:26            412 Error.csv
+-a----       07-07-2017     11:36           2536 Frontend.log
+-a----       06-07-2017     10:30            904 log-20170706.txt
+-a----       10-07-2017     10:57         270793 log-20170710.txt
+-a----       11-07-2017     02:26         193432 log-20170711.txt
+-a----       03-07-2017     10:23           7034 master.cfg
+-a----       11-07-2017     02:01          38985 PullMaster.log
+-a----       04-07-2017     09:03          10759 twistd-20170703.log
+-a----       04-07-2017     10:32       37816768 twistd.log
+-a----       03-07-2017     08:29        7454677 twistd0703
+-a----       30-06-2017     09:29      334958040 twistd_0630
+
+

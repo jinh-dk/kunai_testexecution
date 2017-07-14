@@ -1,0 +1,2 @@
+docker rmi katana_base
+docker build C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Publishing.KatanaTestServer\ --file C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Publishing.KatanaTestServer\Dockerfile_Katana_Base

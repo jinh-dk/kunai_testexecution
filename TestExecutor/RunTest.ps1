@@ -1,6 +1,7 @@
 ﻿param (
     [switch] $localdebugmode = $false,
-    [switch] $reloadkatana = $true
+    [switch] $reloadkatana = $true,
+    [switch] $reloadkatanabase = $false
 )
 
 . .\settings.ps1
@@ -13,7 +14,7 @@ if ($localdebugmode)
 Write-Host "Stop ALL running docker containers, and node processes."
 & .\StopAllPowershellProcesses.ps1
 Write-host "Download the lastest artifacts, and rebuild the docker images, and restart containers."
-& .\PrepareTest.ps1 -reloadkatana $reloadkatana
+& .\PrepareTest.ps1 -reloadkatana $reloadkatana -reloadkatanabase $reloadkatanabase
 
 #TODO: Need find a better way to replace hardcode waiting. 
 

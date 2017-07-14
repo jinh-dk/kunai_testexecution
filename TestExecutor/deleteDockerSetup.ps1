@@ -1,6 +1,7 @@
 ﻿param (
     [switch] $reloadkatana = $false,
-	[switch] $reloadfileserver = $false
+    [switch] $reloadfileserver = $false,
+    [switch] $reloadkatanabase = $false
 )
 
 docker rm docker_api_1
@@ -15,8 +16,12 @@ if ($reloadkatana -eq $true) {
     docker rmi docker_katana
     docker rmi docker_katana_artifacts
     docker rmi docker_katana_slave
-    docker rmi katana_base
     docker rmi docker_katana_mysql
+}
+
+if ($reloadkatanabase -eq $true) 
+{
+    docker rmi katana_base
 }
 
 if ($reloadfileserver -eq $true) {
