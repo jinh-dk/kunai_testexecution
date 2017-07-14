@@ -1,5 +1,4 @@
-﻿
-
+﻿$localtime = Get-Date -Format yyyyMMddhhmmss
 
 $testfwkfolder = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.IntegrationTests.Framework\"
 $testfwkproj = "Publishing.IntegrationTests.Framework.csproj"
@@ -20,8 +19,10 @@ $testfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\"
 
 $logfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\Log\"
 $backendlogfile = "Backend.log"
+$localbackendlogfile = $backendlogfile -replace ".log", "$localtime.log"
 $backendlogfileid = "1iecekG5Rlnme9rfJ4PWP1KPUh1Kt8JOLIMcJHIeZmvk"
 $frontendlogfile = "Frontend.log"
+$localfrontendlogfile = $frontendlogfile -replace ".log", "$localtime.log"
 $frontendlogfileid = "1CmjkWFjPUQZJmEHqgnFhruFMyfR2Gxm8EDGmUKPaMbY"
 $updatemasterlogfile = "PullMaster.log"
 $errorcsvfile = "Error.csv"
@@ -31,3 +32,4 @@ $ownslackChannel = "@jinxu"
 
 $dockerserver = "docker_server_1"
 $serverlogpath = ":/app/src/Publishing.Server/logs"
+

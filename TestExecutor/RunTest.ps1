@@ -51,6 +51,9 @@ if (-not $localdebugmode){
 Write-Host "Test converage report and server logs are uploaded to Google Drive"
 #Update the test coverage, and upload to google drive to share
 # The two python script depending on hardcode file path.
+Write-Host "Copy local log file to remote logfile"
+Copy-Item $logfolder$localfrontendlogfile $logfolder$frontendlogfile -Force
+Copy-Item $logfolder$localbackendlogfile $logfolder$backendlogfile -Force
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate
 
