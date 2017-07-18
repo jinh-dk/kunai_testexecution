@@ -38,7 +38,9 @@ Write-Host "Parse the test report, and send the Error message to Slack channel"
 
 Push-Location $logfolder
 $d = Get-Date -Format yyyyMMdd
-docker cp $dockerserver$serverlogpath/log-$d.txt . 
+docker cp $dockerserver$serverlogpath/log-$d.txt log-$d-server.txt
+docker cp $dockerapi$apilogpath/log-$d.txt log-$d-api.txt
+
 Pop-Location
 
 if (-not $localdebugmode){

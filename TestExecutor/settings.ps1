@@ -32,4 +32,6 @@ $ownslackChannel = "@jinxu"
 
 $dockerserver = "docker_server_1"
 $serverlogpath = ":/app/src/Publishing.Server/logs"
+$dockerapi = "docker_api_1"
+$apilogpath = ":/app/src/Publishing.Api/logs"
 

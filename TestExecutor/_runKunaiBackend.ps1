@@ -7,5 +7,5 @@ Push-Location $masterdockerfolder
 #Remove-Item -Force $logfolder$backendlogfile
 Start-Transcript -path $logfolder$localbackendlogfile
 docker-compose -f docker-compose-dbs.yml -f docker-compose-full.yml up
-Stop-Transcript
+#Stop-Transcript
 Pop-Location

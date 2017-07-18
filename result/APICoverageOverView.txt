@@ -13,8 +13,8 @@
 /api/health,0,0
 /api/health/full,0,0
 /api/health/fault,0,0
-/api/jobs,2,0
-/api/jobs/{correlationId},3,0
+/api/jobs,2,2
+/api/jobs/{correlationId},3,3
 /api/Login/exchange,0,0
 /api/Login/code_exchange,0,0
 /api/Login/signup,0,0
@@ -30,7 +30,7 @@
 /api/subscriptionrequests/{id}/reject,0,0
 /api/subscriptionrequests/history,0,0
 /api/subscriptionrequests/{id},0,0
-/api/Trigger,3,0
+/api/Trigger,3,3
 /api/unitysourceusers,0,0
 /api/versions,2,0
 /api/versions/{id},0,0
