@@ -57,9 +57,9 @@ foreach($testcase in $testcases) {
         #send the error to own slack channel
         .\slack\Scripts\activate     
         if ($ErrorMessage.length -gt 360) {
-            $msg = $ErrorMessage.subString(0, 359)
+            $msg = $TestcaseFullPath + ":" + $ErrorMessage.subString(0, 359)
         } else {
-            $msg = $ErrorMessage
+            $msg = $TestcaseFullPath + ":" + $ErrorMessage
         }
         python.exe .\SendErrorToSlack.py "$msg" $ownslackChannel
         deactivate
@@ -83,7 +83,7 @@ foreach($testcase in $testcases) {
             if ($ErrorMessage.length -gt 360) {
                 $ErrorMessage = $ErrorMessage.subString(0, 359)
             }
-            $ErrorMessage = $TestcaseFullPath + ":" + $ErrorMessage
+            $ErrorMessage = $TestcaseFullPath+":"+$ErrorMessage
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
             #pip install slackclient            
