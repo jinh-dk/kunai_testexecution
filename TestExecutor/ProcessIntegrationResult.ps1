@@ -4,12 +4,19 @@
 
 # Slackbot is running in virtualenv. 
 
+param(
+    [switch] $localdebugmode = $false
+)
+
 . .\settings.ps1
 
 $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
-[xml]$IntegrationTestResult = Get-Content $testresultfolder$testreportname
+[xml]$IntegrationTestResult = Get-Content $testresultfolder$testresultname
 
 Write-host("**************   Reporting *******************")
+if ($localdebugmode) {
+    Write-host("** In Debug mode. **")
+}
 
 $testcases = $IntegrationTestResult.assemblies.assembly.collection.test
 $olderror = Import-Csv $logfolder$errorcsvfile
@@ -18,9 +25,10 @@ $errorcounter = 0
 $ErrorFileId = "1YCdJoTGPLcFuePoqY5MrNUUR_t6F_WJ6jRHsxMPYzh8"
 $range = "A1:Z1000"
 
+# Remove the content in the spreadsheet, so only new contents in the spreadsheet.
 Set-ExecutionPolicy Unrestricted
 .\GoogleSpreadSheet\Scripts\activate        
-curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
+curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
 python.exe ClearSpreadSheet.py $ErrorFileId $range 
 deactivate
 Set-ExecutionPolicy RemoteSigned
@@ -37,40 +45,49 @@ foreach($testcase in $testcases) {
         $ErrorMessage = $testcase.failure.message.'#cdata-section' 
 
         
-        ## Send the error to Spread sheet, and local machine        
-        
+        ## Send the error to Spreadsheet, and local machine                
         $range = "A$errorcounter" + ":B$errorcounter"        
         Set-ExecutionPolicy Unrestricted
+        
         .\GoogleSpreadSheet\Scripts\activate       
-        curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVToGDrive.py
+        curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVtoGDrive.py
         python.exe UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
         deactivate
+
+        #send the error to own slack channel
+        .\slack\Scripts\activate     
+        if ($ErrorMessage.length -gt 360) {
+            $msg = $TestcaseFullPath + ":" + $ErrorMessage.subString(0, 359)
+        } else {
+            $msg = $TestcaseFullPath + ":" + $ErrorMessage
+        }
+        python.exe .\SendErrorToSlack.py "$msg" $ownslackChannel
+        deactivate
+
         Set-ExecutionPolicy RemoteSigned
         
-        #Recorde the new error
+        #Record the new error
         $details = @{
             Testcase = $TestcaseFullPath
             ErrorMessage =  $ErrorMessage
         }
-
         $newerror += New-Object PSObject -Property $details        
 
-        ## Check if the error is an old one##
+        ## Check if the error is already known yesterday##
         if ( $olderror.Testcase.Contains($TestcaseFullPath) -and $olderror.ErrorMessage.Contains($ErrorMessage) ) {              
             $sendslack = $false
         }
                         
-        ## Only send new error to slack
-        if ($sendslack) {
+        ## If a new error, send it to team slack channel
+        if ($sendslack -and (-not $localdebugmode)) {
             if ($ErrorMessage.length -gt 360) {
                 $ErrorMessage = $ErrorMessage.subString(0, 359)
             }
-            $ErrorMessage = $TestcaseFullPath + ":" + $ErrorMessage
+            $ErrorMessage = $TestcaseFullPath+":"+$ErrorMessage
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
-            #pip install slackclient
-            curl.exe https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/SendErrorToSlack.py            
-            python.exe .\SendErrorToSlack.py "$ErrorMessage"
+            #pip install slackclient            
+            python.exe .\SendErrorToSlack.py "$ErrorMessage" $teamslackchannel
             deactivate
             Set-ExecutionPolicy RemoteSigned        
         }        

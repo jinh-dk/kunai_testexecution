@@ -1,7 +1,13 @@
 GoogleSpreadSheet/
 netstandard1.6/
+Log/
+result/
+data/
 slack/
 slacktoken.txt
-Log\
-result\
-data\
+client_secret.json
+ClearSpreadSheet.py
+CreateTestOverview.py
+UploadCSVToGDrive.py
+UploadLogToGDrive.py
+*.log

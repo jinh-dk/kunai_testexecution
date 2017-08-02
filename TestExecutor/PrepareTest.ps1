@@ -1,10 +1,11 @@
 ﻿param (
-    [switch] $reloadkatana = $false
+    [switch] $reloadkatana = $false,
+    [switch] $reloadkatanabase = $false
 )
 
 . .\settings.ps1
 
-.\deleteDockerSetup.ps1 -reloadkatana $reloadkatana
+.\deleteDockerSetup.ps1 -reloadkatana $reloadkatana -reloadkatanabase $reloadkatanabase
 .\pullMaster.ps1
 &.\runKunai.ps1
 Pop-Location
