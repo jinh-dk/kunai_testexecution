@@ -1,4 +1,11 @@
-﻿.\StopHostPowershellProcess.ps1 -processname `"node.exe`"
+﻿<#
+    Stop the powershell process which hosts node.exe process.
+    Stop the powershell process which hosts docker-compose.exe processes.
+    Stop all running dockers.
+    Stop all node.exe process.
+#>
+
+.\StopHostPowershellProcess.ps1 -processname `"node.exe`"
 .\StopHostPowershellProcess.ps1 -processname `"docker-compose.exe`"
 
 docker stop $(docker ps -aq)

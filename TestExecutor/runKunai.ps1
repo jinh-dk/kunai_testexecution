@@ -1,4 +1,11 @@
 ﻿#.\_runSCD.ps1
+param(
+    [switch]$waiting = $true
+)
+
 invoke-expression 'cmd /c start powershell -Command { .\_runKunaiBackend.ps1}'
-Start-Sleep -s 300
+if ($Waiting) 
+{
+    Start-Sleep -s 300
+}
 invoke-expression 'cmd /c start powershell -Command { .\_runKunaiFrontend.ps1; read-host}'

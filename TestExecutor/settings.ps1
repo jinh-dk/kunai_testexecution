@@ -39,3 +39,8 @@ $serverlogpath = ":/app/src/Publishing.Server/logs"
 $dockerapi = "docker_api_1"
 $apilogpath = ":/app/src/Publishing.Api/logs"
 
+$builderserverrootfolder="C:\Users\jinxu\Documents\GitHub\kunai\master\docker\BuildServer\volumes\"
+$kallithearootfolder="C:\Users\jinxu\Documents\GitHub\kunai\master\docker\Kallithea\volumes\"
+$tempfolder="C:\Temp\"
+
+
