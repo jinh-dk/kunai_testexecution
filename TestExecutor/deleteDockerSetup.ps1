@@ -2,7 +2,7 @@
     [switch] $reloadkatana = $false,
     [switch] $reloadfileserver = $true,
     [switch] $reloadkatanabase = $false,
-    [switch] $reloadbuilderserver = $true
+    [switch] $reloadbuildserver = $true
 )
 
 docker rm docker_api_1
@@ -34,8 +34,9 @@ if ($reloadfileserver -eq $true) {
 	docker rmi docker_fileserver_proxy
 }
 
-if ($reloadbuilderserver -eq $true){    
+if ($reloadbuildserver -eq $true){    
     docker rm docker_sourcecode_buildserver_01_1
-    docker rm docker_sourcecode_buildserver_01_1
+    docker rm docker_sourcecode_buildserver_02_1
     docker rmi kunai_buildserver
+    docker rm docker_kallithea_1
 }
