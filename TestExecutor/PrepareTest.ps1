@@ -14,7 +14,7 @@ param (
 . .\settings.ps1
 
 .\deleteDockerSetup.ps1 -reloadkatana $reloadkatana -reloadkatanabase $reloadkatanabase
-.\moveVolumeOutDocker.ps1
+#.\moveVolumeOutDocker.ps1
 .\pullMaster.ps1
 &.\runKunai.ps1
 Pop-Location
@@ -26,6 +26,6 @@ if ($reloadkatana)
 {
     Start-Sleep -Seconds 600
 }
-.\moveVolumeIntoDocker.ps1
+#.\moveVolumeIntoDocker.ps1
 
 Start-Sleep -Seconds 120

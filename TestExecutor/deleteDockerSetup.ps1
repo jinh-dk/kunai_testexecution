@@ -2,7 +2,7 @@
     [switch] $reloadkatana = $false,
     [switch] $reloadfileserver = $true,
     [switch] $reloadkatanabase = $false,
-    [switch] $reloadbuildserver = $true
+    [switch] $reloadbuildserver = $false
 )
 
 docker rm docker_api_1

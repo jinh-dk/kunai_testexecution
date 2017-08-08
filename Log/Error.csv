@@ -1,2 +1,0 @@
-"Testcase","ErrorMessage"
-"Unity.Publishing.Api.IntegrationTest.ApiBuildsIntegrationTest.PublishBuildTest","message: Expected string to be \""6\"" because A promoted build#1 should have status 6, but \""3\"" differs near \""3\"" (index 0).\r\nExpected: True\r\nActual:   False"

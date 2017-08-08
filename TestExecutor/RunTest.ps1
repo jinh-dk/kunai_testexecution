@@ -3,10 +3,15 @@
     [switch] $localdebugmode = $false,
     [switch] $reloadkatana = $true,
     [switch] $reloadkatanabase = $false,
-    [switch] $reloadbuildserver = $false
+    [switch] $reloadbuildserver = $false,
+    [string] $testcasepath = $null
 )
 
 . .\settings.ps1
+
+if (-not $testcasepath) {
+    $testcasepath = $testcasefolder_api
+}
 
 if ($localdebugmode) 
 {
@@ -32,12 +37,8 @@ Pop-Location
 
 Write-Host "Exeucte all stable testcase, and write the result to an XML file"
 Remove-Item -Force $testresultfolder$testresultname
-Push-Location $testcasefolder_api
-dotnet restore
-dotnet build $testcaseproj_api
-dotnet xunit -notrait "Status=Unstable" -verbose -parallel none -xml $testresultfolder$testresultname
 
-Pop-Location
+& .\ExecuteTest.ps1 -testcasepath $testcasepath
 
 Write-Host "Parse the test report, and send the Error message to Slack channel"
 & .\ProcessIntegrationResult.ps1 -localdebugmode $localdebugmode 

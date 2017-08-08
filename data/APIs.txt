@@ -8,6 +8,7 @@
 /api/builds/ci
 /api/builds/{id}
 /api/builds/{id}/promote
+/api/builds/{id}/cancel-promote
 /api/builds/{id}/publish
 /hangfire-login
 /api/health
@@ -20,7 +21,7 @@
 /api/Login/signup
 /api/releasetracks
 /api/releasetracks/{id}
-/api/releasetracks/branchupdate
+/api/releasetracks/branch-update
 /api/releasetracks/branchcheck
 /api/signups/unhandled
 /api/signups/{id}/markhandled

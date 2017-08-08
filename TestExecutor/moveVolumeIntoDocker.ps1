@@ -20,5 +20,5 @@ Pop-Location
 
 Push-Location $kallithearootfolder
 $kallitheafolder = "kallithea\"
-Move-Item -Path $tempfolder$kallitheafolder\ -Destination $kallithearootfolder -Force
+Move-Item -Path $tempfolder$kallitheafolder\* -Destination $kallithearootfolder -Force
 Pop-Location
