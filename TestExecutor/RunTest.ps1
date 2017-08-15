@@ -1,15 +1,17 @@
 ﻿param (
-    [switch] $skippreparation = $false,
-    [switch] $localdebugmode = $false,
-    [switch] $reloadkatana = $true,
-    [switch] $reloadkatanabase = $false,
-    [switch] $reloadbuildserver = $false,
-    [string] $testcasepath = $null
+    [string]$testcasepath = $null,
+    [bool]$skippreparation = $false,
+    [bool]$localdebugmode = $false,
+    [bool]$reloadkatana = $true,
+    [bool]$reloadkatanabase = $false,
+    [bool]$reloadbuildserver = $false
 )
 
 . .\settings.ps1
 
+Write-Host "Start from "$testcasepath
 if (-not $testcasepath) {
+    Write-Host "No Testcase path provided, use default path"
     $testcasepath = $testcasefolder_api
 }
 

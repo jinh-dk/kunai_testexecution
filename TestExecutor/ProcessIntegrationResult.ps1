@@ -5,7 +5,7 @@
 # Slackbot is running in virtualenv. 
 
 param(
-    [switch] $localdebugmode = $false
+    [bool] $localdebugmode = $false
 )
 
 . .\settings.ps1

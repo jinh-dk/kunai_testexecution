@@ -1,8 +1,8 @@
 ﻿param (
-    [switch] $reloadkatana = $false,
-    [switch] $reloadfileserver = $true,
-    [switch] $reloadkatanabase = $false,
-    [switch] $reloadbuildserver = $false
+    [bool] $reloadkatana = $false,
+    [bool] $reloadfileserver = $true,
+    [bool] $reloadkatanabase = $false,
+    [bool] $reloadbuildserver = $false
 )
 
 docker rm docker_api_1

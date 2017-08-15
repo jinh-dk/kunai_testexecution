@@ -7,8 +7,8 @@
 #>
 
 param (
-    [switch] $reloadkatana = $false,
-    [switch] $reloadkatanabase = $false
+    [bool] $reloadkatana = $false,
+    [bool] $reloadkatanabase = $false
 )
 
 . .\settings.ps1

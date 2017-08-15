@@ -1,8 +1,8 @@
 
 param(
-    [switch] $buildserver = $true,
-    [switch] $dbs = $true,
-    [switch] $full = $true,
+    [bool] $buildserver = $true,
+    [bool] $dbs = $true,
+    [bool] $full = $true,
     [string] $service = $null
 )
 . .\settings.ps1
