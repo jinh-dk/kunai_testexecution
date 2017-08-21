@@ -1,4 +1,4 @@
-/api/auditlogentries,5,2
+/api/auditlogentries,5,0
 /api/authusers/{id},0,0
 /api/authusers/checkemailavailable,0,0
 /api/authusers,1,0

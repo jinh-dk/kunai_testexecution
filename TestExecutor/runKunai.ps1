@@ -1,6 +1,6 @@
 ﻿#.\_runSCD.ps1
 param(
-    [bool]$waiting = $true
+    [bool]$waiting = $false
 )
 
 invoke-expression 'cmd /c start powershell -Command { .\_runKunaiBackend.ps1}'
