@@ -10,6 +10,7 @@
 /api/builds/{id}/promote
 /api/builds/{id}/cancel-promote
 /api/builds/{id}/publish
+/api/builds/{id}/cancel-publish
 /hangfire-login
 /api/health
 /api/health/full

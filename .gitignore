@@ -4,6 +4,7 @@ Log/
 result/
 data/
 slack/
+.hg/
 slacktoken.txt
 client_secret.json
 ClearSpreadSheet.py

@@ -66,10 +66,9 @@ Write-Host "Copy local log file to remote logfile"
 Copy-Item $logfolder$localfrontendlogfile $logfolder$frontendlogfile -Force
 Copy-Item $logfolder$localbackendlogfile $logfolder$backendlogfile -Force
 Set-ExecutionPolicy Unrestricted
+Invoke-WebRequest -OutFile CreateTestOverview.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
+Invoke-WebRequest -OutFile UploadLogToGDrive.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
 .\GoogleSpreadSheet\Scripts\activate
-
-curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/CreateTestOverview.py
-curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadLogToGDrive.py
 python.exe CreateTestOverview.py
 python.exe UploadLogToGDrive.py $logfolder$backendlogfile $backendlogfileid
 python.exe UploadLogToGDrive.py $logfolder$frontendlogfile $frontendlogfileid

@@ -27,8 +27,8 @@ $range = "A1:Z1000"
 
 # Remove the content in the spreadsheet, so only new contents in the spreadsheet.
 Set-ExecutionPolicy Unrestricted
+Invoke-WebRequest -OutFile CreateTestcaseOverview.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
 .\GoogleSpreadSheet\Scripts\activate        
-curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
 python.exe ClearSpreadSheet.py $ErrorFileId $range 
 deactivate
 Set-ExecutionPolicy RemoteSigned
@@ -48,9 +48,8 @@ foreach($testcase in $testcases) {
         ## Send the error to Spreadsheet, and local machine                
         $range = "A$errorcounter" + ":B$errorcounter"        
         Set-ExecutionPolicy Unrestricted
-        
+        Invoke-WebRequest -OutFile UploadCSVToGDrive.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVtoGDrive.py        
         .\GoogleSpreadSheet\Scripts\activate       
-        curl.exe -O https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/UploadCSVtoGDrive.py
         python.exe UploadCSVToGDrive.py $ErrorFileId $range $TestcaseFullPath $ErrorMessage
         deactivate
 
