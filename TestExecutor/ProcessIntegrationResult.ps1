@@ -27,7 +27,7 @@ $range = "A1:Z1000"
 
 # Remove the content in the spreadsheet, so only new contents in the spreadsheet.
 Set-ExecutionPolicy Unrestricted
-Invoke-WebRequest -OutFile CreateTestcaseOverview.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
+Invoke-WebRequest -OutFile ClearSpreadSheet.py -Uri https://raw.githubusercontent.com/jinxuunity/ownScript/master/python/CreateTestcaseOverview/ClearSpreadSheet.py
 .\GoogleSpreadSheet\Scripts\activate        
 python.exe ClearSpreadSheet.py $ErrorFileId $range 
 deactivate

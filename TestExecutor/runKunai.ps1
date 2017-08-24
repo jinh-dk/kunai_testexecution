@@ -1,11 +1,19 @@
-﻿#.\_runSCD.ps1
-param(
-    [bool]$waiting = $false
+param (
+    [bool] $reloadkatana = $false,
+    
+    [string]$localbackendlogfile = $null,
+    [string]$localfrontendlogfile = $null
 )
 
-invoke-expression 'cmd /c start powershell -Command { .\_runKunaiBackend.ps1}'
-if ($Waiting) 
+&.\_runKunai.ps1 -localbackendlogfile $localbackendlogfile -localfrontendlogfile $localfrontendlogfile
+
+if ($reloadkatana) 
 {
-    Start-Sleep -s 300
+    Start-Sleep -Seconds 1200
+} else 
+{
+    Start-Sleep -Seconds 600
 }
-invoke-expression 'cmd /c start powershell -Command { .\_runKunaiFrontend.ps1; read-host}'
+#.\moveVolumeIntoDocker.ps1
+
+Start-Sleep -Seconds 120

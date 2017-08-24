@@ -1,5 +1,4 @@
 ﻿$localtime = Get-Date -Format yyyyMMddhhmmss
-
 $testfwkfolder = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.IntegrationTests.Framework\"
 $testfwkproj = "Publishing.IntegrationTests.Framework.csproj"
 

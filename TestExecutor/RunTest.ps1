@@ -1,6 +1,7 @@
 ﻿param (
     [string]$testcasepath = $null,
     [bool]$skippreparation = $false,
+    [bool]$skiptestenvironment = $false,
     [bool]$localdebugmode = $false,
     [bool]$reloadkatana = $true,
     [bool]$reloadkatanabase = $false,
@@ -28,6 +29,10 @@ if (-not $skippreparation) {
     & .\PrepareTest.ps1 -reloadkatana $reloadkatana -reloadkatanabase $reloadkatanabase -reloadbuildserver $reloadbuildserver   
 }
 
+if (-not $skiptestenvironment) {
+    Write-host "Run Docker Based Test Environment. Log to $localbackendlogfile and $localfrontendlogfile"    
+    & .\RunKunai.ps1 -localbackendlogfile $localbackendlogfile -localfrontendlogfile $localfrontendlogfile
+}
 
 #TODO: Need find a better way to replace hardcode waiting. 
 
@@ -62,7 +67,7 @@ if (-not $localdebugmode){
 Write-Host "Test converage report and server logs are uploaded to Google Drive"
 #Update the test coverage, and upload to google drive to share
 # The two python script depending on hardcode file path.
-Write-Host "Copy local log file to remote logfile"
+Write-Host "Copy local log file to remote logfile, $localfrontendlogfile, and $localbackendlogfile"
 Copy-Item $logfolder$localfrontendlogfile $logfolder$frontendlogfile -Force
 Copy-Item $logfolder$localbackendlogfile $logfolder$backendlogfile -Force
 Set-ExecutionPolicy Unrestricted

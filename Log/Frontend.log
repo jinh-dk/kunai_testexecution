@@ -1,61 +1,20 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170713020612
+Start time: 20170824131041
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
-Process ID: 64488
-PSVersion: 5.1.15063.413
+Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAIAAtAGwAbwBnAGYAaQBsAGUAIABGAHIAbwBuAHQAZQBuAGQAMgAwADEANwAwADgAMgA0ADAAMQAxADAANAAwAC4AbABvAGcAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
+Process ID: 19556
+PSVersion: 5.1.15063.502
 PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.413
-BuildVersion: 10.0.15063.413
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
+BuildVersion: 10.0.15063.502
 CLRVersion: 4.0.30319.42000
 WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Frontend.log
-
-- ms@0.7.1 node_modules\compression\node_modules\ms
-- debug@2.2.0 node_modules\compression\node_modules\debug
-kunai-frontend@0.1.0 C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-+-- @angular/cli@1.2.1
-+-- @types/node@7.0.35
-`-- zone.js@0.8.13
-
-> kunai-frontend@0.1.0 prestart C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> npm run git-revision
+Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Frontend20170824011040.log
 
 
-> kunai-frontend@0.1.0 git-revision C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> node git-revision.js
-
-wrote git revision info to file: ./src/git-revision.json
-
-> kunai-frontend@0.1.0 start C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> ng serve
-
-** NG Live Development Server is listening on localhost:4200, open your browser on http://localhost
-:4200 **
-Hash: c7ca291ff4d24a5f576a
-Time: 17799ms
-chunk    {0} main.bundle.js, main.bundle.js.map (main) 396 kB {3} [initial] [rendered]
-chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial] [rendered]
-chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial] [rendered]
-chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.36 MB [initial] [rendered]
-chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry] [rendered]
-webpack: Compiled successfully.
-webpack: Compiling...
-Hash: c7ca291ff4d24a5f576a
-Time: 667ms
-chunk    {0} main.bundle.js, main.bundle.js.map (main) 396 kB {3} [initial]
-chunk    {1} styles.bundle.js, styles.bundle.js.map (styles) 652 kB {4} [initial]
-chunk    {2} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.08 MB {4} [initial]
-chunk    {3} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.36 MB [initial]
-chunk    {4} inline.bundle.js, inline.bundle.js.map (inline) 0 bytes [entry]
-webpack: Compiled successfully.
-**********************
-Windows PowerShell transcript end
-End time: 20170713022849
-**********************
