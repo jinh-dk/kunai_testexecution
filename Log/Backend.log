@@ -1,11 +1,11 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170824131041
+Start time: 20170825075254
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkAQgBhAGMAawBlAG4AZAAuAHAAcwAxACAALQBsAG8AZwBmAGkAbABlACAAQgBhAGMAawBlAG4AZAAyADAAMQA3ADAAOAAyADQAMAAxADEAMAA0ADAALgBsAG8AZwAgAA== -inputFormat xml -outputFormat text
-Process ID: 9188
+Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkAQgBhAGMAawBlAG4AZAAuAHAAcwAxACAALQBsAG8AZwBmAGkAbABlACAAQgBhAGMAawBlAG4AZAAyADAAMQA3ADAAOAAyADUAMAA3ADUAMgAxADUALgBsAG8AZwAgAA== -inputFormat xml -outputFormat text
+Process ID: 24768
 PSVersion: 5.1.15063.502
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
@@ -15,4 +15,4 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Backend20170824011040.log
+Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Backend20170825075215.log

@@ -1,3 +1,7 @@
+<#
+    Exeucte the Xunit testcase. the testcase path is mandatory to give. 
+#>
+
 param (
     [string]$testcasepath,
     [string]$testcaseproj = $null,
