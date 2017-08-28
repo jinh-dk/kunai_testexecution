@@ -15,40 +15,42 @@ param (
 ## Improve the waiting time for building all the dockers. Now is more intelligent.   
 ## The server and api docker should be that last two docker on starting.  
 ## Stop check until this two dockers on starting process, 
-$AreServerAndApiUp = $false
-$isServerUp = $false
-$isApiUp = $false
-$cnt = 0
-Push-Location $masterdockerfolder
-while(-not $AreServerAndApiUp) {    
-    $_server = (docker-compose.exe -f .\docker-compose-dbs.yml -f .\docker-compose-full.yml ps | Select-String docker_server_1)
-    if ($_server) {
-        $isServerUp = $_server.ToString().Contains('Up')
-    }
+.\CheckDockerComposeServiceRunning.ps1 -Service docker_server_1 -WaitingTimeInMinute 30
+.\CheckDockerComposeServiceRunning.ps1 -Service docker_api_1 -WaitingTimeInMinute 30 -ExtraWaitingTimeInSeconds 300
+# $AreServerAndApiUp = $false
+# $isServerUp = $false
+# $isApiUp = $false
+# $cnt = 0
+# Push-Location $masterdockerfolder
+# while(-not $AreServerAndApiUp) {    
+#     $_server = (docker-compose.exe -f .\docker-compose-dbs.yml -f .\docker-compose-full.yml ps | Select-String docker_server_1)
+#     if ($_server) {
+#         $isServerUp = $_server.ToString().Contains('Up')
+#     }
     
-    if(-not $isServerUp){
-        Write-Host 'Server is not running'
-    }
+#     if(-not $isServerUp){
+#         Write-Host 'Server is not running'
+#     }
     
-    $_api = (docker-compose.exe  -f .\docker-compose-dbs.yml -f .\docker-compose-full.yml ps | Select-String docker_api_1)
-    if ($_api) {
-        $isApiUp = $_api.ToString().Contains('Up')
-    }    
-    if(-not $isApiUp){
-        Write-Host 'Api is not running'
-    }
-    $AreServerAndApiUp = $isServerUp -and $isApiUp
+#     $_api = (docker-compose.exe  -f .\docker-compose-dbs.yml -f .\docker-compose-full.yml ps | Select-String docker_api_1)
+#     if ($_api) {
+#         $isApiUp = $_api.ToString().Contains('Up')
+#     }    
+#     if(-not $isApiUp){
+#         Write-Host 'Api is not running'
+#     }
+#     $AreServerAndApiUp = $isServerUp -and $isApiUp
     
     
-    $cnt++
-    # Check every 5 seconds.
-    Start-Sleep -Seconds 5
-    if ($cnt -ge 360){
-        Write-Host -ForegroundColor Red "The Envirnment is not available after 40 minutes. Quit loop"
-        break;
-    }    
-}
-Pop-Location
+#     $cnt++
+#     # Check every 5 seconds.
+#     Start-Sleep -Seconds 5
+#     if ($cnt -ge 480){
+#         Write-Host -ForegroundColor Red "The Envirnment is not available after 40 minutes. Quit loop"
+#         break;
+#     }    
+# }
+# Pop-Location
 
 Write-Host "Both Server and Api docker are starting... wait another 5 minutes for initialization"
 Start-Sleep -Seconds 300

@@ -19,8 +19,10 @@ $dockerfolder = "\docker"
 .\deleteDockerSetup.ps1
 
 ## checkout master
+# Many branch contains back slash, which is bad to folder structure, use dash instead.
 Push-Location $devmainfolder
-$foldername = "devtest$branchname"
+$foldername = "devtest-$branchname".Replace("/", "-")
+
 if (-not (Test-Path $foldername)) {
     git clone $gitrepo $foldername
 }
@@ -37,10 +39,14 @@ Pop-Location
 
 ## run docker compose, wait 10 minutes for initilization.
 Push-Location $devmainfolder$foldername$dockerfolder
+Write-Host "Start Environment at $devmainfolder$foldername$dockerfolder"
 $cmd = "docker-compose.exe -f docker-compose-dbs.yml -f docker-compose-full.yml up"
 Invoke-Expression ('cmd /c start powershell -Command {{ {0}; }}' -f $cmd)
-Start-Sleep -Seconds 600
+
 Pop-Location
+Start-Sleep -Seconds 10
+.\CheckDockerComposeServiceRunning.ps1 -Service docker_server_1 -WaitingTimeInMinute 10 -DockerFolder $devmainfolder$foldername$dockerfolder
+.\CheckDockerComposeServiceRunning.ps1 -Service docker_api_1 -WaitingTimeInMinute 10 -ExtraWaitingTimeInSeconds 300 -DockerFolder $devmainfolder$foldername$dockerfolder
 
 ## Execute test
 .\ExecuteTest.ps1 -testcasepath $testcasefolder_api
