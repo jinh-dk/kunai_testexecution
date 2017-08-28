@@ -43,7 +43,7 @@ while(-not $AreServerAndApiUp) {
     $cnt++
     # Check every 5 seconds.
     Start-Sleep -Seconds 5
-    if ($cnt > 480){
+    if ($cnt -ge 360){
         Write-Host -ForegroundColor Red "The Envirnment is not available after 40 minutes. Quit loop"
         break;
     }    
