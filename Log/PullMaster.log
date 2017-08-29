@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170828100007
+Start time: 20170829082228
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
@@ -23,5 +23,5 @@ Running build script...
 
 **********************
 Windows PowerShell transcript end
-End time: 20170828100046
+End time: 20170829082304
 **********************
