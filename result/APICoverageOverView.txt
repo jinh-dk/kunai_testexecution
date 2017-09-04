@@ -19,13 +19,13 @@
 /api/jobs/{correlationId},3,0
 /api/Login/exchange,0,0
 /api/Login/code_exchange,0,0
-/api/Login/signup,0,0
+/api/Login/signup,1,0
 /api/releasetracks,6,0
 /api/releasetracks/{id},3,0
 /api/releasetracks/branch-update,1,0
 /api/releasetracks/branchcheck,1,0
-/api/signups/unhandled,0,0
-/api/signups/{id}/markhandled,0,0
+/api/signups/unhandled,1,0
+/api/signups/{id}/markhandled,1,0
 /api/subscriptionrequests,0,0
 /api/subscriptionrequests/{subscriptionOrCompanyId}/clone,0,0
 /api/subscriptionrequests/{id}/approve,0,0

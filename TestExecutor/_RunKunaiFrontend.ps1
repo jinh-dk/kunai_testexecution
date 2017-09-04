@@ -20,5 +20,6 @@ Start-Transcript -path $logfolder$localfrontendlogfile
 npm install
 npm update
 npm start
-#Stop-Transcript
+
+Stop-Transcript
 Pop-Location

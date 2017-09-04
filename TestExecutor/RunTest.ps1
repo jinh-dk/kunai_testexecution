@@ -50,12 +50,6 @@ Remove-Item -Force $testresultfolder$testresultname
 Write-Host "Parse the test report, and send the Error message to Slack channel"
 & .\ProcessIntegrationResult.ps1 -localdebugmode $localdebugmode 
 
-Push-Location $logfolder
-$d = Get-Date -Format yyyyMMdd
-docker cp $dockerserver$serverlogpath/log-$d.txt log-$d-server.txt
-docker cp $dockerapi$apilogpath/log-$d.txt log-$d-api.txt
-
-Pop-Location
 
 if (-not $localdebugmode){
     Write-Host "Stop ALL running docker containers, and node processes."
@@ -63,6 +57,12 @@ if (-not $localdebugmode){
 }
 #Start-Sleep -s 60
 
+## The copy has to happen after stop all powershell process, otherwise the content is not flushed into file yet. 
+Push-Location $logfolder
+$d = Get-Date -Format yyyyMMdd
+docker cp $dockerserver$serverlogpath/log-$d.txt log-$d-server.txt
+docker cp $dockerapi$apilogpath/log-$d.txt log-$d-api.txt
+Pop-Location
 
 Write-Host "Test converage report and server logs are uploaded to Google Drive"
 #Update the test coverage, and upload to google drive to share
