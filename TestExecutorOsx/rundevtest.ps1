@@ -9,7 +9,6 @@ param(
 )
 
 . ./settings.ps1
-
 $dockerfolder = "/docker"
 
 ## Stop current docker
@@ -38,11 +37,16 @@ iex $cmd
 Pop-Location
 
 ## run docker compose, wait 10 minutes for initilization.
-Push-Location $devmainfolder$foldername$dockerfolder
-Write-Host "Start Environment at $devmainfolder$foldername$dockerfolder"
 $cmd = "docker-compose -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
-$args = "-f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
-Start-Process docker-compose -ArgumentList $args
+. ./Start-InNewWindowMacOS
+Start-InNewWindowMacOS -NoExit {Push-Location $devmainfolder$foldername$dockerfolder ; 
+    Write-Host "Start Environment at $devmainfolder$foldername$dockerfolder";
+    Invoke-Expression $cmd; 
+    Pop-Location }
+
+#$args = "-f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
+    
+#Start-Process docker-compose -ArgumentList $args
 #open -a Terminal.app `/usr/local/bin/powershell ./UpDocker.ps1`
 
 #$cmd = "docker-compose -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
@@ -52,7 +56,6 @@ Start-Process docker-compose -ArgumentList $args
 #Invoke-Expression ('open -a Terminal /usr/local/bin/powershell -Command {{ {0}; }}' -f $cmd)
 
 
-Pop-Location
 Start-Sleep -Seconds 10
 .\CheckDockerComposeServiceRunning.ps1 -Service docker_server_1 -WaitingTimeInMinute 10 -DockerFolder $devmainfolder$foldername$dockerfolder
 .\CheckDockerComposeServiceRunning.ps1 -Service docker_api_1 -WaitingTimeInMinute 10 -ExtraWaitingTimeInSeconds 300 -DockerFolder $devmainfolder$foldername$dockerfolder
