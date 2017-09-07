@@ -3,7 +3,7 @@
 $testfwkfolder = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.IntegrationTests.Framework\"
 $testfwkproj = "Publishing.IntegrationTests.Framework.csproj"
 
-$testcasefolder_api = "C:\Users\jinxu\Documents\GitHub\kunai\dev\itest\test\Publishing.Api.IntegrationTest\"
+$testcasefolder_api = "/Users/jinxu/codes/kunai/dev/itest/test/Publishing.Api.IntegrationTest\"
 $testcaseproj_api = "Publishing.Api.IntegrationTest.csproj"
 
 $testresultfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\result\"
@@ -16,6 +16,7 @@ $masterfolder = "/Users/jinxu/codes/kunai/master/"
 $masterdockerfolder = "/Users/jinxu/codes/kunai/master/docker/"
 $masterfrontendfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\frontend\"
 $testfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\"
+$devmainfolder= "/Users/jinxu/codes/kunai/dev/"
 
 $logfolder = "/Users/jinxu/codes/kunai/test/Log/"
 $backendlogfile = "BackendOsx.log"
