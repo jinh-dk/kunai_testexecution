@@ -1,11 +1,11 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170904020113
+Start time: 20170908082451
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkAQgBhAGMAawBlAG4AZAAuAHAAcwAxACAALQBsAG8AZwBmAGkAbABlACAAQgBhAGMAawBlAG4AZAAyADAAMQA3ADAAOQAwADQAMAAyADAAMAAwADIALgBsAG8AZwAgAA== -inputFormat xml -outputFormat text
-Process ID: 24384
+Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkAQgBhAGMAawBlAG4AZAAuAHAAcwAxACAALQBsAG8AZwBmAGkAbABlACAAQgBhAGMAawBlAG4AZAAyADAAMQA3ADAAOQAwADgAMAA4ADIANAAxADIALgBsAG8AZwAgADIAPgAmADEAIAA+ACAAYgBhAGMAawBlAG4AZABjAG8AbgBzAG8AbABlAC4AbABvAGcA -inputFormat xml -outputFormat text
+Process ID: 26328
 PSVersion: 5.1.15063.502
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
@@ -15,4 +15,79 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Backend20170904020002.log
+docker-compose : Building katana_mysql
+At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\_runKunaiBackend.ps1:21 char:1
++ docker-compose -f docker-compose-buildserver.yml -f docker-compose-db ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Building katana_mysql:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Image for service katana_mysql was built because it did not already exist. To rebuild this image you must use `docker-co
+mpose build` or `docker-compose up --build`.
+Building fileserver_server
+Image for service fileserver_server was built because it did not already exist. To rebuild this image you must use `dock
+er-compose build` or `docker-compose up --build`.
+Building fileserver_proxy
+Image for service fileserver_proxy was built because it did not already exist. To rebuild this image you must use `docke
+r-compose build` or `docker-compose up --build`.
+Building server
+Image for service server was built because it did not already exist. To rebuild this image you must use `docker-compose 
+build` or `docker-compose up --build`.
+Building api
+Image for service api was built because it did not already exist. To rebuild this image you must use `docker-compose bui
+ld` or `docker-compose up --build`.
+Building katana_artifacts
+Image for service katana_artifacts was built because it did not already exist. To rebuild this image you must use `docke
+r-compose build` or `docker-compose up --build`.
+Building katana
+Image for service katana was built because it did not already exist. To rebuild this image you must use `docker-compose 
+build` or `docker-compose up --build`.
+Building katana_slave
+Image for service katana_slave was built because it did not already exist. To rebuild this image you must use `docker-co
+mpose build` or `docker-compose up --build`.
+Starting docker_sourcecodestripagent01_1 ...
+Starting docker_akamai_mock_1 ...
+Starting docker_sourcecodestripagent01_1
+Starting docker_akamai_mock_1
+Starting docker_kallithea_1 ...
+Creating docker_repo-cache_1 ...
+Starting docker_kallithea_1
+Creating docker_katana_artifacts_1 ...
+Creating docker_postgres_1 ...
+Creating docker_fileserver_server_1 ...
+Creating docker_hangfire-db_1 ...
+Creating docker_katana_base_1 ...
+Creating docker_katana_mysql_1 ...
+Creating docker_repo-cache_1
+Creating docker_katana_artifacts_1
+Creating docker_postgres_1
+Creating docker_fileserver_server_1
+Creating docker_katana_base_1
+Creating docker_katana_mysql_1
+Creating docker_hangfire-db_1
+[1A[2KStarting docker_sourcecodestripagent01_1 ... [32mdone[0m[1B
+Starting docker_sourcecodestripagent02_1 ...
+Starting docker_sourcecodestripagent02_1
+[1A[2KCreating docker_fileserver_server_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_katana_mysql_1 ... [32mdone[0m[1B
+[1A[2KStarting docker_sourcecodestripagent02_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_postgres_1 ... [32mdone[0m[1B
+[1A[2KStarting docker_akamai_mock_1 ... [32mdone[0m[1B
+[1A[2KStarting docker_kallithea_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_repo-cache_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_katana_base_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_katana_artifacts_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_hangfire-db_1 ... [32mdone[0m[1B
+Creating docker_fileserver_proxy_1 ... 
+Creating docker_api_1 ...
+Creating docker_server_1 ...
+Creating docker_katana_1 ...
+Creating docker_api_1
+Creating docker_server_1
+Creating docker_fileserver_proxy_1
+Creating docker_katana_1
+[1A[2KCreating docker_server_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_api_1 ... [32mdone[0m[1B
+[1A[2KCreating docker_katana_1 ... [32mdone[0m[1B
+Creating docker_katana_slave_1 ...
+Creating docker_katana_slave_1
+[1A[2KCreating docker_fileserver_proxy_1 ... [32mdone[0m[1B

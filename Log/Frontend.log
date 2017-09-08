@@ -1,11 +1,11 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170904020113
+Start time: 20170908082451
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAIAAtAGwAbwBnAGYAaQBsAGUAIABGAHIAbwBuAHQAZQBuAGQAMgAwADEANwAwADkAMAA0ADAAMgAwADAAMAAyAC4AbABvAGcAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
-Process ID: 19400
+Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAIAAtAGwAbwBnAGYAaQBsAGUAIABGAHIAbwBuAHQAZQBuAGQAMgAwADEANwAwADkAMAA4ADAAOAAyADQAMQAyAC4AbABvAGcAIAAyAD4AJgAxACAAPgAgAGYAcgBvAG4AdABjAG8AbgBzAG8AbABlAC4AbABvAGcAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
+Process ID: 20064
 PSVersion: 5.1.15063.502
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
@@ -15,41 +15,3 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Frontend20170904020002.log
-
-
-
-> kunai-frontend@0.1.0 prestart C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> npm run git-revision
-
-
-> kunai-frontend@0.1.0 git-revision C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> node git-revision.js
-
-wrote git revision info to file: ./src/git-revision.json
-
-> kunai-frontend@0.1.0 start C:\Users\jinxu\Documents\GitHub\kunai\master\frontend
-> ng serve
-
-** NG Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200 **
-Date: 2017-09-04T00:02:02.439Z
-Hash: d271c1d7d76800bd5782
-Time: 22023ms
-chunk {inline} inline.bundle.js, inline.bundle.js.map (inline) 5.83 kB [entry] [rendered]
-chunk {main} main.bundle.js, main.bundle.js.map (main) 547 kB {vendor} [initial] [rendered]
-chunk {scripts} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.12 MB {inline} [initial] [rendered]
-chunk {styles} styles.bundle.js, styles.bundle.js.map (styles) 661 kB {inline} [initial] [rendered]
-chunk {vendor} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.61 MB [initial] [rendered]
-
-webpack: Compiled successfully.
-webpack: Compiling...
-Date: 2017-09-04T00:02:04.485Z
-Hash: 4fb3fe0f6704d2cfb5a0
-Time: 1212ms
-chunk {inline} inline.bundle.js, inline.bundle.js.map (inline) 5.83 kB [entry]
-chunk {main} main.bundle.js, main.bundle.js.map (main) 547 kB {vendor} [initial]
-chunk {scripts} scripts.bundle.js, scripts.bundle.js.map (scripts) 1.12 MB {inline} [initial]
-chunk {styles} styles.bundle.js, styles.bundle.js.map (styles) 661 kB {inline} [initial]
-chunk {vendor} vendor.bundle.js, vendor.bundle.js.map (vendor) 3.61 MB [initial]
-
-webpack: Compiled successfully.
