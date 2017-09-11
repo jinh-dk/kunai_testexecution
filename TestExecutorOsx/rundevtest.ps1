@@ -39,10 +39,7 @@ Pop-Location
 ## run docker compose, wait 10 minutes for initilization.
 $cmd = "docker-compose -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
 . ./Start-InNewWindowMacOS
-Start-InNewWindowMacOS -NoExit {Push-Location $devmainfolder$foldername$dockerfolder ; 
-    Write-Host "Start Environment at $devmainfolder$foldername$dockerfolder";
-    Invoke-Expression $cmd; 
-    Pop-Location }
+Start-InNewWindowMacOS -NoExit { }
 
 #$args = "-f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up"
     
