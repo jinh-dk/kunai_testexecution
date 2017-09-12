@@ -8,3 +8,4 @@ Write-Host $devmainfolder$foldername$dockerfolder
 Write-Host $cmd
 Invoke-Expression $cmd
 Pop-Location
+
