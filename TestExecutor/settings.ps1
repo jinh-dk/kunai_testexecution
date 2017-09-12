@@ -16,6 +16,7 @@ $masterdockerfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\docker\"
 $masterfrontendfolder = "C:\Users\jinxu\Documents\GitHub\kunai\master\frontend\"
 $testfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\"
 $devmainfolder = "C:\Users\jinxu\Documents\GitHub\kunai\dev\"
+$owncloudlogfolder="C:\Users\jinxu\ownCloud\TestData\CDS\Projects\Kunai\TestLog\"
 
 $logfolder = "C:\Users\jinxu\Documents\GitHub\kunai\test\Log\"
 $backendlogfile = "Backend.log"

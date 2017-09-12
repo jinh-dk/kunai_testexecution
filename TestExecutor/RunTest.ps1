@@ -104,3 +104,7 @@ else
     deactivate
     Set-ExecutionPolicy RemoteSigned  
 }
+
+.\CopyLogFileToOwnCloud.ps1
+
+

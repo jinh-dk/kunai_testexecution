@@ -1,11 +1,11 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170908082415
+Start time: 20170912082648
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
 Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 13864
+Process ID: 5256
 PSVersion: 5.1.15063.502
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
@@ -17,11 +17,51 @@ SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\PullMaster.log
 
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\jinxu\Documents\GitHub\kunai\master> popd
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> docker ps -a
 
-Preparing to run build script...
-Running build script...
+PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
+Start from
+No Testcase path provided, use default path
+Run Test in Debug mode
+Stop ALL running docker containers, and node processes.
+
+Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
+At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:13 char:14
++ $processes = Get-Process -Name "node"
++              ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
+At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:13 char:14
++ $processes = Get-Process -Name "node"
++              ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+Download the lastest artifacts, and rebuild the docker images, and restart containers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **********************
 Windows PowerShell transcript end
-End time: 20170908082450
+End time: 20170912083026
 **********************

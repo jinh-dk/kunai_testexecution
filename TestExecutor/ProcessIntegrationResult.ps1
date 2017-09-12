@@ -86,7 +86,8 @@ foreach($testcase in $testcases) {
             Set-ExecutionPolicy Unrestricted
             .\slack\Scripts\activate
             #pip install slackclient            
-            python.exe .\SendErrorToSlack.py "$ErrorMessage" $teamslackchannel
+            #python.exe .\SendErrorToSlack.py "$ErrorMessage" $teamslackchannel
+            python.exe .\SendErrorToSlack.py "$ErrorMessage" $ownslackChannel
             deactivate
             Set-ExecutionPolicy RemoteSigned        
         }        
