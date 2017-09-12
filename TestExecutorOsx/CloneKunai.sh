@@ -7,5 +7,5 @@ if [ -n "$1" ]; then
     git submodule update --init
     pushd
 else 
-    echo "CloneKunai.sh folername,  foldername is mandatory to give"
+    echo -e "CloneKunai.sh \033[0;31m foldername \033[0m, foldername is mandatory to give"
 fi
