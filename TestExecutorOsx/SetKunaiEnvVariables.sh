@@ -1,0 +1,6 @@
+export ASPNETCORE_URLS=http://*:6002
+export KUNAI_ENVIRONMENT=Development
+export KUNAI_GoogleClientSecret=aSfsDWD_pN_bpRccb6uWgC9t
+export KUNAI_JWTKEY=mysupersecretkey
+export ASPNETCORE_ENVIRONMENT=Development
+export ASPNET_ENVIRONMENT=Development
