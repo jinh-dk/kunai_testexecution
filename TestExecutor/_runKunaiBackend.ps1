@@ -1,8 +1,15 @@
 ﻿param (
-    [string]$logfile = $null
+    [string]$logfile = $null,
+    [string]$dockerfolder = $null
 )
 
 . .\settings.ps1
+
+if (-not $dockerfolder)
+{
+    Write-Host "No destionation folder provide, use master docker folder"
+    $dockerfolder = $masterdockerfolder
+}
 
 # The logfile will use the timestamp of local time. 
 # If run this script in another script, it is important that the logfile has the same name accoss over all the scripts. 
@@ -12,12 +19,8 @@ if ($logfile){
     $localbackendlogfile = $logfile
 }
 
-Push-Location $masterdockerfolder
-# Sometime the Stop-Transcript is not exexucted so that the Start-Transcript cannot start next time
-#Stop-Transcript
-#Remove-Item -Force $logfolder$backendlogfile
+Push-Location $dockerfolder
 Start-Transcript -path $logfolder$localbackendlogfile
-#docker-compose -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up
-docker-compose -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up
+docker-compose.exe -f docker-compose-buildserver.yml -f docker-compose-dbs.yml -f docker-compose-full.yml up
 Stop-Transcript
 Pop-Location

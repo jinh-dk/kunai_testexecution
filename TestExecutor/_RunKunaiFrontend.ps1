@@ -1,5 +1,6 @@
 ﻿param (
-    [string]$logfile = $null
+    [string]$logfile = $null,
+    [string]$frontendfolder = $null
 )
 
 . .\settings.ps1
@@ -11,11 +12,12 @@ if ($logfile){
     $localfrontendlogfile = $logfile
 }
 
-Push-Location $masterfrontendfolder
+if (-not $frontendfolder){
+    Write-Host "No Frontend folder provide, use default master front end folder."
+    $frontendfolder = $masterfrontendfolder
+}
 
-# Sometime the Stop-Transcript is not exexucted so that the Start-Transcript cannot start next time
-#Stop-Transcript
-#Remove-Item -Force C:\Users\jinxu\Documents\GitHub\KunaiLog\Frontend.log
+Push-Location $frontendfolder
 Start-Transcript -path $logfolder$localfrontendlogfile
 npm install
 npm update

@@ -1,17 +1,20 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170912083103
+Start time: 20170914093414
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
-Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAIAAtAGwAbwBnAGYAaQBsAGUAIABGAHIAbwBuAHQAZQBuAGQAMgAwADEANwAwADkAMQAyADAAOAAzADAAMgAwAC4AbABvAGcAIAAyAD4AJgAxACAAPgAgAGYAcgBvAG4AdABjAG8AbgBzAG8AbABlAC4AbABvAGcAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
-Process ID: 12156
-PSVersion: 5.1.15063.502
+Host Application: powershell -encodedCommand IAAuAFwAXwByAHUAbgBLAHUAbgBhAGkARgByAG8AbgB0AGUAbgBkAC4AcABzADEAIAAtAGwAbwBnAGYAaQBsAGUAIABGAHIAbwBuAHQAZQBuAGQAMgAwADEANwAwADkAMQA0ADAAOQAzADMAMwA1AC4AbABvAGcAOwAgAHIAZQBhAGQALQBoAG8AcwB0AA== -inputFormat xml -outputFormat text
+Process ID: 15016
+PSVersion: 5.1.15063.608
 PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
-BuildVersion: 10.0.15063.502
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.608
+BuildVersion: 10.0.15063.608
 CLRVersion: 4.0.30319.42000
 WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
+Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\Frontend20170914093335.log
+
+

@@ -1,67 +1,152 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20170912082648
+Start time: 20170914093336
 Username: HQ\jinxu
 RunAs User: HQ\jinxu
 Machine: CPH-WKS-0019 (Microsoft Windows NT 10.0.15063.0)
 Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 5256
-PSVersion: 5.1.15063.502
+Process ID: 9652
+PSVersion: 5.1.15063.608
 PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
-BuildVersion: 10.0.15063.502
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.608
+BuildVersion: 10.0.15063.608
 CLRVersion: 4.0.30319.42000
 WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is C:\Users\jinxu\Documents\GitHub\kunai\test\Log\PullMaster.log
+Current branch master is up to date.
+  Restore completed in 25,34 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj.
+  Restore completed in 25,31 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj.
+  Restore completed in 95,77 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj.
+  Restore completed in 7,25 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj.
+  Restore completed in 122,82 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\KunaiSSH.NET\src\Renci.SshNet.NETCore\Renci.SshNet.NETCore.csproj.
+  Restore completed in 6,15 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj.
+  Restore completed in 212,16 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj.
+  Restore completed in 211,53 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj.
+  Restore completed in 153,9 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj.
+  Restore completed in 212,87 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj.
+  Restore completed in 211,89 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj.
+  Restore completed in 162,55 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj.
+  Restore completed in 67 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.DevelopmentServer\Publishing.DevelopmentServer.csproj.
+  Restore completed in 28,45 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj.
+  Restore completed in 36,82 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj.
+  Restore completed in 53,75 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restore completed in 68,27 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restore completed in 47,96 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj.
+  Restore completed in 11,43 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 64,87 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj.
+  Restore completed in 56,64 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 45,49 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restore completed in 80,31 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.IntegrationTest\Publishing.Server.IntegrationTest.csproj.
+  Restore completed in 48,19 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 43,63 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restore completed in 39,75 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.UnitTests\Publishing.UnitTests.csproj.
+  Restore completed in 90,14 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restore completed in 298,8 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj.
+Preparing to run build script...
+Running build script...
+Analyzing build script...
+Processing build script...
+Installing tools...
+Installing addins...
+Compiling build script...
+Setting up task: Restore
 
-PS>TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
-PS C:\Users\jinxu\Documents\GitHub\kunai\master> popd
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> docker ps -a
+========================================
+Restore
+========================================
+Executing task: Restore
+  Restore completed in 21,01 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\BlinkSyncLib.csproj.
+  Restore completed in 21,01 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\Octokit.csproj.
+  Restore completed in 25,39 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\Publishing.Abstractions.csproj.
+  Restore completed in 45,07 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\libs\KunaiSSH.NET\src\Renci.SshNet.NETCore\Renci.SshNet.NETCore.csproj.
+  Restore completed in 11,91 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\Publishing.Activity.WriteToLog.csproj.
+  Restore completed in 61,1 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\Publishing.Activity.SendSlackMessage.csproj.
+  Restore completed in 68,08 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\Publishing.Activity.PushKallitheaToGithub.csproj.
+  Restore completed in 69,61 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\Publishing.Activity.Notifications.csproj.
+  Restore completed in 1,56 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\Publishing.CodeContracts.csproj.
+  Restore completed in 79,17 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\Publishing.Activity.Releases.csproj.
+  Restore completed in 75,54 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\Publishing.Activity.Subscriptions.csproj.
+  Restore completed in 76,51 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\Publishing.Activity.SourceCodeHosting.csproj.
+  Restore completed in 43,76 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\Publishing.Migration.csproj.
+  Restore completed in 43,18 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\Publishing.Engine.csproj.
+  Restore completed in 46,69 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restore completed in 56,05 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.DevelopmentServer\Publishing.DevelopmentServer.csproj.
+  Restore completed in 61,98 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 10,19 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\Publishing.IntegrationTests.Framework.csproj.
+  Restore completed in 8,88 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 24,18 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restore completed in 107,44 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\Publishing.Api.csproj.
+  Restore completed in 28,61 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\Publishing.Services.csproj.
+  Restore completed in 56,32 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\Publishing.Activity.Releases.IntegrationTests.csproj.
+  Restore completed in 26,58 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\Publishing.Server.csproj.
+  Restore completed in 54,07 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\Publishing.Api.IntegrationTest.csproj.
+  Restore completed in 30,7 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\Publishing.Services.IntegrationTests.csproj.
+  Restore completed in 33,16 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.IntegrationTest\Publishing.Server.IntegrationTest.csproj.
+  Restore completed in 38,07 ms for C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.UnitTests\Publishing.UnitTests.csproj.
+Finished executing task: Restore
+Tearing down task: Restore
+Setting up task: Build
 
-PS C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor> .\RunTest.ps1 -localdebugmode $true
-Start from
-No Testcase path provided, use default path
-Run Test in Debug mode
-Stop ALL running docker containers, and node processes.
+========================================
+Build
+========================================
+Executing task: Build
+Microsoft (R) Build Engine version 15.3.409.57025 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
 
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:13 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
-Get-Process : Cannot find a process with the name "node". Verify the process name and call the cmdlet again.
-At C:\Users\jinxu\Documents\GitHub\kunai\test\TestExecutor\StopAllPowershellProcesses.ps1:13 char:14
-+ $processes = Get-Process -Name "node"
-+              ~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (node:String) [Get-Process], ProcessCommandException
-    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+  Publishing.Abstractions -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Abstractions\bin\Debug\netstandard2.0\Publishing.Abstractions.dll
+  BlinkSyncLib -> C:\Users\jinxu\Documents\GitHub\kunai\master\libs\BlinkSyncLib\Source\BlinkSyncLib\bin\Debug\netstandard2.0\BlinkSyncLib.dll
+C:\Program Files\dotnet\sdk\2.0.0\Sdks\Microsoft.NET.Sdk\build\Microsoft.NET.Sdk.DefaultItems.targets(199,5): warning : A PackageReference for 'NETStandard.Library' was included in your project.
+ This package is implicitly referenced by the .NET SDK and you do not typically need to reference it from your project. For more information, see https://aka.ms/sdkimplicitrefs [C:\Users\jinxu\D
+ocuments\GitHub\kunai\master\libs\KunaiSSH.NET\src\Renci.SshNet.NETCore\Renci.SshNet.NETCore.csproj]
+  Octokit -> C:\Users\jinxu\Documents\GitHub\kunai\master\libs\Octokit\bin\Debug\netstandard2.0\Octokit.dll
+  Publishing.Activity.WriteToLog -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.WriteToLog\bin\Debug\netstandard2.0\Publishing.Activity.WriteToLog.dll
+  Renci.SshNet.NETCore -> C:\Users\jinxu\Documents\GitHub\kunai\master\libs\KunaiSSH.NET\src\Renci.SshNet.NETCore\bin\Debug\netstandard1.3\Renci.SshNet.dll
+  Publishing.IntegrationTests.Framework -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.IntegrationTests.Framework\bin\Debug\netstandard2.0\Publishing.IntegrationTests.Framework.
+dll
+  Publishing.CodeContracts -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.CodeContracts\bin\Debug\netcoreapp2.0\Publishing.CodeContracts.dll
+  Publishing.Api.IntegrationTest -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Api.IntegrationTest\bin\Debug\netcoreapp2.0\Publishing.Api.IntegrationTest.dll
+  Publishing.Services -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Services\bin\Debug\netstandard2.0\Publishing.Services.dll
+  Publishing.Server.IntegrationTest -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Server.IntegrationTest\bin\Debug\netcoreapp2.0\Publishing.Server.IntegrationTest.dll
+  Publishing.Activity.PushKallitheaToGithub -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.PushKallitheaToGithub\bin\Debug\netstandard2.0\Publishing.Activity.PushKallith
+eaToGithub.dll
+  Publishing.Services.IntegrationTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Services.IntegrationTests\bin\Debug\netcoreapp2.0\Publishing.Services.IntegrationTests.dll
+  Publishing.Activity.SourceCodeHosting -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SourceCodeHosting\bin\Debug\netstandard2.0\Publishing.Activity.SourceCodeHosting.d
+ll
+  Publishing.Engine -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Engine\bin\Debug\netstandard2.0\Publishing.Engine.dll
+  Publishing.Activity.Notifications -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Notifications\bin\Debug\netstandard2.0\Publishing.Activity.Notifications.dll
+  Publishing.Activity.Releases -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Releases\bin\Debug\netstandard2.0\Publishing.Activity.Releases.dll
+  Publishing.Migration -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Migration\bin\Debug\netcoreapp2.0\Publishing.Migration.dll
+  Publishing.Activity.SendSlackMessage -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.SendSlackMessage\bin\Debug\netstandard2.0\Publishing.Activity.SendSlackMessage.dll
+  Publishing.Api -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Api\bin\Debug\netcoreapp2.0\Publishing.Api.dll
+  Publishing.Activity.Releases.IntegrationTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.Activity.Releases.IntegrationTests\bin\Debug\netcoreapp2.0\Publishing.Activity.Rel
+eases.IntegrationTests.dll
+  Publishing.Activity.Subscriptions -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Activity.Subscriptions\bin\Debug\netstandard2.0\Publishing.Activity.Subscriptions.dll
+  Publishing.Server -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.Server\bin\Debug\netcoreapp2.0\Publishing.Server.dll
+  Publishing.DevelopmentServer -> C:\Users\jinxu\Documents\GitHub\kunai\master\src\Publishing.DevelopmentServer\bin\Debug\netcoreapp2.0\Publishing.DevelopmentServer.dll
+  Publishing.UnitTests -> C:\Users\jinxu\Documents\GitHub\kunai\master\test\Publishing.UnitTests\bin\Debug\netcoreapp2.0\Publishing.UnitTests.dll
+Finished executing task: Build
+Tearing down task: Build
+Setting up task: Default
 
-Download the lastest artifacts, and rebuild the docker images, and restart containers.
+========================================
+Default
+========================================
+Executing task: Default
+Finished executing task: Default
+Tearing down task: Default
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Task                          Duration
+--------------------------------------------------
+Restore                       00:00:04.8037219
+Build                         00:00:19.0661951
+Default                       00:00:00.0073380
+--------------------------------------------------
+Total:                        00:00:23.8772550
 **********************
 Windows PowerShell transcript end
-End time: 20170912083026
+End time: 20170914093413
 **********************

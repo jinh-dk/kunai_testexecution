@@ -7,6 +7,8 @@ param (
     [string]$localfrontendlogfile = $null
 )
 
+.\RemoveApiPropertiesFolder.ps1
+
 &.\_runKunai.ps1 -localbackendlogfile $localbackendlogfile -localfrontendlogfile $localfrontendlogfile
 
 ## load setting after _runKunai.ps1, as the conflict of variable name.
