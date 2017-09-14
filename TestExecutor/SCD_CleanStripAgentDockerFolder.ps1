@@ -21,7 +21,8 @@ param(
 
 if (-not $folder)
 {
-    $folder = $masterdockerfolder
+    $folder = $masterdockerfolder,
+    $cleansourcefolder=$false
 }
 
 
@@ -32,5 +33,9 @@ Get-ChildItem ".\BuildServer\volumes\buildserver_01\build\" -Recurse | Remove-It
 Get-ChildItem ".\BuildServer\volumes\buildserver_01\destination\" -Recurse | Remove-Item -Force
 Get-ChildItem ".\Kallithea\volumes\repos\.cache\" -Recurse | Remove-Item -Force
 Get-ChildItem ".\Kallithea\volumes\repos\unity-2017\pop" -Recurse | Remove-Item -Force
+if($cleansourcefolder)
+{
+    Get-ChildItem ".\BuildServer\volumes\buildserver_01\source\" -Recurse | Remove-Item -Force
+}
 Pop-Location
 
