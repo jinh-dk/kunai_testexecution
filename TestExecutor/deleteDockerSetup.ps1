@@ -35,8 +35,8 @@ if ($reloadfileserver -eq $true) {
 }
 
 if ($reloadbuildserver -eq $true){    
-    docker rm docker_sourcecode_buildserver_01_1
-    docker rm docker_sourcecode_buildserver_02_1
+    docker rm docker_sourcecodestripagent01_1
+    docker rm docker_sourcecodestripagent02_1
     docker rmi kunai_buildserver
     docker rm docker_kallithea_1
 }
