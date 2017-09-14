@@ -11,4 +11,5 @@ ClearSpreadSheet.py
 CreateTestOverview.py
 UploadCSVToGDrive.py
 UploadLogToGDrive.py
+SetKunaiEnvSecretsVariables.ps1
 *.log
