@@ -1,0 +1,116 @@
+﻿version: '3'
+services:
+    hangfire-db:        
+        image: postgres
+        env_file:
+        - ./hangfile-db.env
+        environment:
+        - POSTGRES_PASSWORD=mypassword
+        - POSTGRES_DB=hangfire
+        ports:
+        - "${HFPORT}:5432"
+    repo-cache:
+        image: redis
+        env_file:
+        - ./repo-cache.env
+        ports:
+        - "${REPOPORT}:6379"
+    postgres:
+        image: postgres:latest
+        env_file:
+        - ./postgres.env
+        environment:
+        - POSTGRES_PASSWORD=superman
+        - POSTGRES_USER=kunaiuser
+        - POSTGRES_DB=Kunai
+        ports:
+        - "${PGPORT}:5432"
+    kallithea:
+    #user: admin
+    #password: K4ll1th34
+        build:
+            context: ./Kallithea/build/
+            dockerfile: KallitheaDockerfile
+        tty: true
+        env_file:
+        - ./kallithea.env
+        volumes:
+        - ./Kallithea/volumes/data:/opt/kallithea/data
+        - ./Kallithea/volumes/repos:/opt/kallithea/repos
+        ports:
+        - "${KLTPORT}:80/tcp"
+    # Katana services
+    katana_base:
+        build:
+            context: ../libs/Publishing.KatanaTestServer/
+            dockerfile: Dockerfile_Katana_Base
+        image: katana_base
+    katana:
+        build:
+            context: ../libs/Publishing.KatanaTestServer/katana
+            args:
+                web_port: 8002
+        env_file:
+        - ./katana.env
+        ports:
+        - "${KTNPORT}:8002"
+        environment:
+        - KATANA_WEB_PORT=8002
+        expose:
+        - "9901"
+        depends_on:
+        - katana_mysql
+        - katana_artifacts
+    katana_slave:
+        build:
+            context: ../libs/Publishing.KatanaTestServer/katana_slave
+        depends_on:
+        - katana
+        - katana_artifacts
+    katana_mysql:
+        build:
+            context: ../libs/Publishing.KatanaTestServer/mysql
+        expose:
+        - "3306"
+        command: 'mysqld --character-set-server=utf8'
+    katana_artifacts:
+        build:
+            context: ../libs/Publishing.KatanaTestServer/katana_artifacts
+        env_file:
+        - ./katana_artifacts.env
+        expose:
+        - "80"
+        - "22"
+        ports:
+        - "${KTNATFCTPORTPORT}:80"
+
+    # File server
+    fileserver_server:
+        build:
+            context: ../libs/Publishing.FileTestServer/server
+        env_file:
+        - ./fileserver_server.env
+        expose:
+        - "5000"
+        - "4444"
+        ports:
+        - "${FSPORT}:4444"
+    fileserver_proxy:
+        build:
+            context: ../libs/Publishing.FileTestServer/proxy        
+        environment:
+        - MAPPED_HTTPS_PORT=${FILE_SERVER_HTTPS_PORT}
+        env_file:
+        - ./fileserver_proxy.env
+        command: /bin/bash -c "envsubst '$$MAPPED_HTTPS_PORT' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && echo 'Listening on https://localhost:${FILE_SERVER_HTTPS_PORT}' && nginx -g 'daemon off;'"
+        ports:
+        - "${FSPPORT}:80"
+        - "${FILE_SERVER_HTTPS_PORT}:443"
+        links:
+        - fileserver_server
+    akamai_mock:
+        image: kennship/http-echo
+        env_file:
+        - ./akamai_mock.env
+        ports:
+        - "${AKMPORT}:3000"

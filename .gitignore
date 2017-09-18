@@ -13,3 +13,4 @@ UploadCSVToGDrive.py
 UploadLogToGDrive.py
 SetKunaiEnvSecretsVariables.ps1
 *.log
+*.env

@@ -12,6 +12,7 @@ param(
 . ./settings.ps1
 
 if (-not $folder) {
+    Write-Host "No Folder provide to the script, Check the master folder."    
     $folder = $masterfolder
 }
 
@@ -19,4 +20,8 @@ if (Test-Path $folder"src\Publishing.Api\Properties")
 {
     Write-Host -ForegroundColor Red "API\Properties folder found. Remove it"
     Remove-Item -Recurse -Force $folder"src\Publishing.Api\Properties"
+}
+else 
+{
+    Write-Host -ForegroundColor Green "API\Properties folder NOT found."
 }

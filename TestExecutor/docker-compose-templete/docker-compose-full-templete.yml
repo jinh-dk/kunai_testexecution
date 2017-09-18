@@ -1,0 +1,28 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ../
+      dockerfile: ./docker/ApiDockerfile
+    env_file:
+      - ./api.env
+    ports:
+      - "${APIPORT}:6002"
+    environment:
+      - KUNAI_GoogleClientSecret
+      - KUNAI_OnoGraphqlClientOptions__ApiKey
+    depends_on:
+      - postgres
+  server:
+    build:
+      context: ../
+      dockerfile: ./docker/ServerDockerfile
+    depends_on:
+      - postgres
+      - repo-cache
+    environment:
+      - KUNAI_RAYGUNSETTINGS__APIKEY
+      - KUNAI_ScdBuilderOptions__OnoUsername
+      - KUNAI_ScdBuilderOptions__OnoPassword
+      - KUNAI_PublishMountSmbWindowsSymbolServer_UserName
+      - KUNAI_PublishMountSmbWindowsSymbolServer_Password

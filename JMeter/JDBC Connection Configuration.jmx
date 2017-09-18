@@ -50,10 +50,39 @@
           <stringProp name="queryTimeout"></stringProp>
           <stringProp name="queryType">Select Statement</stringProp>
           <stringProp name="resultSetHandler">Store as String</stringProp>
-          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="resultVariable">Request_1</stringProp>
           <stringProp name="variableNames"></stringProp>
         </JDBCSampler>
-        <hashTree/>
+        <hashTree>
+          <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+            <stringProp name="cacheKey"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">//var name = vars.get(&quot;Name&quot;)
+
+import groovy.json.JsonSlurper
+
+def jsonSlurper = new JsonSlurper();
+
+
+def response = prev.getResponseDataAsString();
+//vars.put(response);
+//def response = jsonSlurper.parseText(prev.getResponseDataAsString());
+//vars.put(&quot;firstName&quot;, response.members[2].firstName.toString());
+
+if(response.contains(&quot;null&quot;)) 
+{
+	AssertionResult.setFailure(true)
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223Assertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion" enabled="true">
+            <stringProp name="DurationAssertion.duration">10</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>

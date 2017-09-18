@@ -1,0 +1,35 @@
+{    
+    "hangfire-db" : {
+        "HFPORT":5534
+    },
+    "repo-cache" : {
+        "REPOPORT":6480 
+    },
+    "postgres": {
+        "PGPORT":5533
+    },
+    "kallithea": {
+        "KLTPORT":3180
+    },
+    "katana": {
+        "KTNPORT":8102
+    },
+    "katana_artifacts": {
+        "KTNATFCTPORT":8103
+    },
+    "fileserver_server": {
+        "FSPORT":4544
+    },
+    "fileserver_proxy": {
+        "FSPPORT":4180,
+        "FILE_SERVER_HTTPS_PORT":4543
+    },
+    "akamai_mock": {
+        "AKMPORT":8110        
+    },
+    "api": {
+        "APIPORT":6102        
+    }
+}
+
+

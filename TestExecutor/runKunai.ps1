@@ -7,7 +7,7 @@ param (
     [string]$localfrontendlogfile = $null
 )
 
-.\RemoveApiPropertiesFolder.ps1
+.\DeleteApiPropertiesFolder.ps1
 
 &.\_runKunai.ps1 -localbackendlogfile $localbackendlogfile -localfrontendlogfile $localfrontendlogfile
 
