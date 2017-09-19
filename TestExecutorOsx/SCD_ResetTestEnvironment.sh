@@ -7,6 +7,6 @@ else
     . SCD_CleanStripAgentDockerFoler.sh
 fi 
 echo "Delete Database"
-powershell ../DeleteDatabaseDocker.ps1
+powershell ../TestExecutor/DeleteDatabaseDocker.ps1
 
 echo echo -e "\033[0;31m Remember to rescan Kallithea after restart the test environment \033[0m"
