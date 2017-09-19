@@ -2,11 +2,18 @@
 
 echo "Clean folder"
 if [ -n "$2" ] &&  [ "$2" == true ]; then     
-    . SCD_CleanStripAgentDockerFoler.sh $1 $2
+    . SCD_CleanStripAgentDockerFolder.sh $1 $2
 else 
-    . SCD_CleanStripAgentDockerFoler.sh
+    . SCD_CleanStripAgentDockerFolder.sh
 fi 
-echo "Delete Database"
-powershell ../TestExecutor/DeleteDatabaseDocker.ps1
+
+
+if [ -n "$3"] && ["$3" == true]; then
+    echo "Delete Database and server, api image"
+    powershell ../TestExecutor/DeleteDockerSetup.ps1
+else
+    echo "Delete Database"
+    powershell ../TestExecutor/DeleteDatabaseDocker.ps1
+fi
 
 echo -e "\033[0;31m Remember to rescan Kallithea after restart the test environment \033[0m"
