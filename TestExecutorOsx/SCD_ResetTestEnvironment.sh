@@ -8,7 +8,7 @@ else
 fi 
 
 
-if [ -n "$3"] && ["$3" == true]; then
+if [ -n "$3" ] && [ "$3" == true ]; then
     echo "Delete Database and server, api image"
     powershell ../TestExecutor/DeleteDockerSetup.ps1
 else
